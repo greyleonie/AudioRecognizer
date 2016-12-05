@@ -1,0 +1,28 @@
+存储过程名称:omm_sys_CreateWF
+参数一:申报人姓名
+参数二:标题
+参数三:故障描述
+参数四:请求编号(REQ+14位时间流水)
+参数五:房间ID
+参数六:输出参数(表示成功与否)
+
+@poser nvarchar(200),
+@title nvarchar(200),
+@description nvarchar(1000),
+@reqSn nvarchar(50),
+@roomId int,
+@error int output
+
+
+
+获取房间ID:(测试例子)
+select top 1 RoomID from Room where BuildingID=(select top 1 BuildingID from Building where BuildingName like '%勤学楼%') and RoomName like '%601%'
+
+
+--部门
+select top 1 roomid from room where roomname like '%办公楼%' and roomtypeid=4
+
+--楼
+select top 1 buildingid from building where buildingname like '%办公楼%'
+--房间
+select top 1 roomid from room where buildingid=11 and roomname like '%校长办公室%'

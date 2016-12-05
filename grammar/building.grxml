@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='GB'?>
+<grammar xml:lang="zh-cn" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="Building">
+
+<meta name="incompletetimeout" content="1500"/>
+
+<rule id="Building">
+	<one-of>
+		<item>勤学楼</item> 
+
+		<item>二十三栋</item>
+		<item>礼堂</item>
+
+		<item>二十六栋</item>
+
+		<item>二十七栋</item>
+
+		<item>三十栋</item>
+
+		<item>培训楼</item>
+
+		<item>二栋</item>
+		<item>教工宿舍</item>
+
+		<item>三栋</item>
+		<item>教工宿舍</item>
+
+		<item>四栋</item>
+		<item>教工宿舍</item>
+
+		<item>十八栋</item>
+		<item>行政楼</item>
+
+		<item>二十一栋</item>
+		<item>办公楼</item>
+
+		<item>平房</item>
+
+		<item>游泳池侧</item>
+
+		<item>二十八栋</item>
+
+		<item>二十九栋</item>
+
+		<item>三十一栋</item>
+
+		<item>三十二栋</item>
+
+		<item>三十三栋</item>
+
+		<item>教研楼</item>
+		<item>二十二栋</item>
+
+		<item>永福综合楼</item>
+		<item>永福</item>
+
+		<item>怡乐园</item>
+
+		<item>柯子岭</item>
+	
+	</one-of>
+</rule>
+
+</grammar>	

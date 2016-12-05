@@ -1,0 +1,4079 @@
+<?xml version='1.0' encoding='GB'?>
+<grammar xml:lang="zh-cn" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="Place">
+
+<meta name="incompletetimeout" content="2000"/>
+
+<!-- [嗯][我在] <勤学楼709> [啊]   -->
+
+<rule id="Place" scope="public">
+	<item> 
+		<ruleref uri="#Sentence"/>
+		<tag>
+			SWI_literal = Sentence.V
+		</tag>
+	</item>
+</rule>
+
+<rule id="Sentence">
+	<item repeat="0-"> 
+		<ruleref uri="#Reserved"/>
+		<tag>R1 = Reserved.V</tag> 
+	</item>
+
+	<item repeat="1"> 
+		<ruleref uri="#PlaceChoose"/>
+<!--
+		<tag>V = PlaceChoose.BUILDING + ' ' + PlaceChoose.NUM</tag> 
+-->
+		<tag>V = PlaceChoose.BUILDING</tag>
+	</item>
+
+	<item repeat="0-"> 
+		<ruleref uri="#Reserved"/>
+		<tag>R2 = Reserved.V</tag> 
+	</item>
+</rule>
+
+<rule id="PlaceChoose">
+	<item>
+     <ruleref uri="#DEPARTMENT"/>
+     <tag>BUILDING = DEPARTMENT.V</tag>
+  </item>
+<!--
+  <item>
+     <ruleref uri="#DIGITSTRING"/>
+     <tag>NUM = DIGITSTRING.V</tag>
+  </item>
+
+	<item>
+     <ruleref uri="#NUMBER"/>
+     <tag>NUM = NUMBER.V</tag>
+  </item>
+  -->
+</rule>
+
+
+<rule id="Reserved">
+	<one-of>
+		<item>我在</item>
+		<item>我这里是</item>
+		<item>我这是</item>
+		<item>这里是</item>
+	</one-of>
+	<tag>V = ' '</tag>
+</rule>
+
+
+<rule id="DEPARTMENT">
+  <one-of>
+  
+  
+    <item>
+			<one-of>
+	    	<item>二十二栋</item>
+	    	<item>教研楼</item>
+  		</one-of>
+			<tag>V='22栋'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十一栋</item>
+	    	<item>行政楼</item>
+	    	<item>行政处</item>
+  		</one-of>
+			<tag>V='21栋'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>办公楼</item>
+	    	<item>二十栋</item>
+  		</one-of>
+			<tag>V='办公楼'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>办公室</item>
+  		</one-of>
+			<tag>V='办公室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十三栋</item>
+	    	<item>二十三栋礼堂</item>
+	    	<item>礼堂</item>
+				<item>阶梯教室</item>
+  		</one-of>
+			<tag>V='23栋'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>学员宿舍</item>
+  		</one-of>
+			<tag>V='学员宿舍'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>游泳池</item>
+  		</one-of>
+			<tag>V='游泳池'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>三十三栋</item>
+  		</one-of>
+			<tag>V='33栋'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>怡乐园</item>
+  		</one-of>
+			<tag>V='怡乐园'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>羽毛球馆</item>
+	    	<item>球馆</item>
+  		</one-of>
+			<tag>V='羽毛球馆'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>康乐园</item>
+				<item>康乐园办公室</item>
+			</one-of>
+			<tag>V='康乐园'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>校长办公室</item>
+	    	<item>校长室</item>
+  		</one-of>
+			<tag>V='校长室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>机要室</item>
+  		</one-of>
+			<tag>V='机要室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>车队</item>
+  		</one-of>
+			<tag>V='车队'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>文印室</item>
+	    	<item>文印</item>
+  		</one-of>
+			<tag>V='文印'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>组织处</item>
+	    	<item>人事处</item>
+	    	<item>组织人事处</item>
+  		</one-of>
+  		<tag>V='组织人事处'</tag>
+		</item> 
+
+		<item>
+			<one-of>
+	    	<item>机关党委</item>
+	    	<item>党委</item>
+  		</one-of>
+			<tag>V='机关党委'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>教务处</item>
+  		</one-of>
+			<tag>V='教务处'</tag>
+		</item>
+		 
+		<item>
+			<one-of>
+	    	<item>科研处</item>
+  		</one-of>
+			<tag>V='科研处'</tag>
+		</item> 
+
+		<item>
+			<one-of>
+	    	<item>行政处</item>
+  		</one-of>
+			<tag>V='行政处'</tag>
+		</item> 
+		
+		<item>
+			<one-of>
+	    	<item>保卫科</item>
+  		</one-of>
+			<tag>V='保卫科'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>管理科</item>
+				<item>管理服务科</item>
+			</one-of>
+			<tag>V='管理科'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>学员饭堂</item>
+	    	<item>饭堂二楼</item>
+	    	<item>二楼饭堂</item>
+	    	<item>食堂二楼</item>
+  		</one-of>
+			<tag>V='饭堂二楼'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>食堂</item>
+	    	<item>膳食科</item>
+  		</one-of>
+			<tag>V='膳食科'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>财务处</item>
+  		</one-of>
+			<tag>V='财务处'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>学员管理处</item>
+  		</one-of>
+			<tag>V='学员管理处'</tag>
+		</item> 
+
+		<item>
+			<one-of>
+	    	<item>分校协调处</item>
+  		</one-of>
+			<tag>V='分校协调处'</tag>
+		</item> 
+
+		<item>
+			<one-of>
+	    	<item>收发室</item>
+	    	<item>传达室</item>
+  		</one-of>
+			<tag>V='收发室'</tag>
+		</item>
+	
+		<item>
+			<one-of>
+	    	<item>老干处</item>
+	    	<item>离退休干部处</item>
+	    	<item>离退休干部管理处</item>
+  		</one-of>
+			<tag>V='离退休干部管理处'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>哲学与文化教研部</item>
+	    	<item>哲文部</item>
+	    	<item>哲学</item>
+	    	<item>哲学教研部</item>
+	    	<item>语文</item>
+	    	<item>语文教研部</item>
+  		</one-of>
+			<tag>V='哲学与文化教研部'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>经济学教研部</item>
+	    	<item>经济学</item>
+  		</one-of>
+			<tag>V='经济学教研部'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>政法教研部</item>
+	    	<item>政治学与法学教研部</item>
+	    	<item>政法部</item>
+	    	<item>政法</item>
+	    	<item>政治学</item>
+	    	<item>法学</item>
+	    	<item>政治学教研部</item>
+	    	<item>法学教研部</item>
+  		</one-of>
+  		<tag>V='政治学与法学教研部'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>公共管理教研部</item>
+	    	<item>管理学教研部</item>
+	    	<item>管理学</item>
+  		</one-of>
+			<tag>V='公共管理教研部'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>党史党建教研部</item>
+	    	<item>党建教研部</item>
+	    	<item>党史党建</item>
+	    	<item>党建</item>
+  		</one-of>
+			<tag>V='党史党建教研部'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>马克思列宁主义研究室</item>
+	    	<item>马克思主义研究室</item>
+	    	<item>马列所</item>
+	    	<item>马列</item>
+  		</one-of>
+			<tag>V='马克思列宁主义研究室'</tag>
+		</item>	
+
+		<item>
+			<one-of>
+	    	<item>图书馆</item>
+	    	<item>信息研究部</item>
+	    	<item>信息技术部</item>
+	    	<item>读者工作部</item>
+  		</one-of>
+			<tag>V='图书馆'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>信息网络中心</item>
+	    	<item>网络中心</item>
+	    	<item>信息中心</item>
+	    	<item>电教中心</item>
+	    	<item>电教</item>
+  		</one-of>
+			<tag>V='信息网络中心'</tag>
+		</item>
+
+		<item>
+			<one-of>
+	    	<item>报告厅</item>
+	    	<item>勤学楼报告厅</item>
+  		</one-of>
+			<tag>V='报告厅'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>一课室</item>
+	    	<item>勤学楼一课室</item>
+  		</one-of>
+			<tag>V='勤学楼1课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二课室</item>
+	    	<item>勤学楼二课室</item>
+  		</one-of>
+			<tag>V='勤学楼2课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三课室</item>
+	    	<item>勤学楼三课室</item>
+  		</one-of>
+			<tag>V='勤学楼3课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四课室</item>
+	    	<item>勤学楼四课室</item>
+  		</one-of>
+			<tag>V='勤学楼4课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五课室</item>
+	    	<item>勤学楼五课室</item>
+  		</one-of>
+			<tag>V='勤学楼5课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六课室</item>
+	    	<item>勤学楼六课室</item>
+  		</one-of>
+			<tag>V='勤学楼6课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>培训楼二课室</item>
+  		</one-of>
+			<tag>V='培训楼2课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>培训楼三课室</item>
+  		</one-of>
+			<tag>V='培训楼3课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>培训楼四课室</item>
+  		</one-of>
+			<tag>V='培训楼4课室'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>办公楼4楼会议室</item>
+  		</one-of>
+			<tag>V='办公楼4楼会议室'</tag>
+		</item>
+  
+  
+  
+  
+  
+  
+  	<item>
+			<one-of>
+				<item>勤学楼六零幺</item>
+	    	<item>勤学楼六零一</item>
+  		</one-of>
+			<tag>V='勤学楼 601'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零二</item>
+  		</one-of>
+			<tag>V='勤学楼 602'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零三</item>
+  		</one-of>
+			<tag>V='勤学楼 603'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零四</item>
+  		</one-of>
+			<tag>V='勤学楼 604'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零五</item>
+  		</one-of>
+			<tag>V='勤学楼 605'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零六</item>
+  		</one-of>
+			<tag>V='勤学楼 606'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零七</item>
+  		</one-of>
+			<tag>V='勤学楼 607'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零八</item>
+  		</one-of>
+			<tag>V='勤学楼 608'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼六零九</item>
+  		</one-of>
+			<tag>V='勤学楼 609'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼六幺零</item>
+	    	<item>勤学楼六一零</item>
+  		</one-of>
+			<tag>V='勤学楼 610'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼六幺幺</item>
+	    	<item>勤学楼六一一</item>
+  		</one-of>
+			<tag>V='勤学楼 611'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼六幺二</item>
+	    	<item>勤学楼六一二</item>
+  		</one-of>
+			<tag>V='勤学楼 612'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼六幺三</item>
+	    	<item>勤学楼六一三</item>
+  		</one-of>
+			<tag>V='勤学楼 613'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼六幺四</item>
+	    	<item>勤学楼六一四</item>
+  		</one-of>
+			<tag>V='勤学楼 614'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼六幺五</item>
+	    	<item>勤学楼六一五</item>
+  		</one-of>
+			<tag>V='勤学楼 615'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>勤学楼七零幺</item>
+	    	<item>勤学楼七零一</item>
+  		</one-of>
+			<tag>V='勤学楼 701'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零二</item>
+  		</one-of>
+			<tag>V='勤学楼 702'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零三</item>
+  		</one-of>
+			<tag>V='勤学楼 703'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零四</item>
+  		</one-of>
+			<tag>V='勤学楼 704'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零五</item>
+  		</one-of>
+			<tag>V='勤学楼 705'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零六</item>
+  		</one-of>
+			<tag>V='勤学楼 706'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零七</item>
+  		</one-of>
+			<tag>V='勤学楼 707'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零八</item>
+  		</one-of>
+			<tag>V='勤学楼 708'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼七零九</item>
+  		</one-of>
+			<tag>V='勤学楼 709'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼七幺零</item>
+	    	<item>勤学楼七一零</item>
+  		</one-of>
+			<tag>V='勤学楼 710'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼七幺幺</item>
+	    	<item>勤学楼七一一</item>
+  		</one-of>
+			<tag>V='勤学楼 711'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼七幺二</item>
+	    	<item>勤学楼七一二</item>
+  		</one-of>
+			<tag>V='勤学楼 712'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼七幺三</item>
+	    	<item>勤学楼七一三</item>
+  		</one-of>
+			<tag>V='勤学楼 713'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼七幺四</item>
+	    	<item>勤学楼七一四</item>
+  		</one-of>
+			<tag>V='勤学楼 714'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼七幺五</item>
+	    	<item>勤学楼七一五</item>
+  		</one-of>
+			<tag>V='勤学楼 715'</tag>
+		</item>
+  
+  	
+  	
+  	<item>
+			<one-of>
+				<item>勤学楼八零幺</item>
+	    	<item>勤学楼八零一</item>
+  		</one-of>
+			<tag>V='勤学楼 801'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零二</item>
+  		</one-of>
+			<tag>V='勤学楼 802'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零三</item>
+  		</one-of>
+			<tag>V='勤学楼 803'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零四</item>
+  		</one-of>
+			<tag>V='勤学楼 804'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零五</item>
+  		</one-of>
+			<tag>V='勤学楼 805'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零六</item>
+  		</one-of>
+			<tag>V='勤学楼 806'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零七</item>
+  		</one-of>
+			<tag>V='勤学楼 807'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零八</item>
+  		</one-of>
+			<tag>V='勤学楼 808'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼八零九</item>
+  		</one-of>
+			<tag>V='勤学楼 809'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼八幺零</item>
+	    	<item>勤学楼八一零</item>
+  		</one-of>
+			<tag>V='勤学楼 810'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼八幺幺</item>
+	    	<item>勤学楼八一一</item>
+  		</one-of>
+			<tag>V='勤学楼 811'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼八幺二</item>
+	    	<item>勤学楼八一二</item>
+  		</one-of>
+			<tag>V='勤学楼 812'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼八幺三</item>
+	    	<item>勤学楼八一三</item>
+  		</one-of>
+			<tag>V='勤学楼 813'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼八幺四</item>
+	    	<item>勤学楼八一四</item>
+  		</one-of>
+			<tag>V='勤学楼 814'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼八幺五</item>
+	    	<item>勤学楼八一五</item>
+  		</one-of>
+			<tag>V='勤学楼 815'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>勤学楼九零幺</item>
+	    	<item>勤学楼九零一</item>
+  		</one-of>
+			<tag>V='勤学楼 901'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零二</item>
+  		</one-of>
+			<tag>V='勤学楼 902'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零三</item>
+  		</one-of>
+			<tag>V='勤学楼 903'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零四</item>
+  		</one-of>
+			<tag>V='勤学楼 904'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零五</item>
+  		</one-of>
+			<tag>V='勤学楼 905'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零六</item>
+  		</one-of>
+			<tag>V='勤学楼 906'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零七</item>
+  		</one-of>
+			<tag>V='勤学楼 907'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零八</item>
+  		</one-of>
+			<tag>V='勤学楼 908'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼九零九</item>
+  		</one-of>
+			<tag>V='勤学楼 909'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼九幺零</item>
+	    	<item>勤学楼九一零</item>
+  		</one-of>
+			<tag>V='勤学楼 910'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼九幺幺</item>
+	    	<item>勤学楼九一一</item>
+  		</one-of>
+			<tag>V='勤学楼 911'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼九幺二</item>
+	    	<item>勤学楼九一二</item>
+  		</one-of>
+			<tag>V='勤学楼 912'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼九幺三</item>
+	    	<item>勤学楼九一三</item>
+  		</one-of>
+			<tag>V='勤学楼 913'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼九幺四</item>
+	    	<item>勤学楼九一四</item>
+  		</one-of>
+			<tag>V='勤学楼 914'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼九幺五</item>
+	    	<item>勤学楼九一五</item>
+  		</one-of>
+			<tag>V='勤学楼 915'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零幺</item>
+	    	<item>勤学楼一零零一</item>
+  		</one-of>
+			<tag>V='勤学楼 1001'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼幺零零二</item>
+	    	<item>勤学楼一零零二</item>
+  		</one-of>
+			<tag>V='勤学楼 1002'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零三</item>
+	    	<item>勤学楼一零零三</item>
+  		</one-of>
+			<tag>V='勤学楼 1003'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零四</item>
+				<item>勤学楼一零零四</item>
+  		</one-of>
+			<tag>V='勤学楼 1004'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零五</item>
+	    	<item>勤学楼一零零五</item>
+  		</one-of>
+			<tag>V='勤学楼 1005'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零六</item>
+	    	<item>勤学楼一零零六</item>
+  		</one-of>
+			<tag>V='勤学楼 1006'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零七</item>
+	    	<item>勤学楼一零零七</item>
+  		</one-of>
+			<tag>V='勤学楼 1007'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零八</item>
+	    	<item>勤学楼一零零八</item>
+  		</one-of>
+			<tag>V='勤学楼 1008'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零零九</item>
+	    	<item>勤学楼一零零九</item>
+  		</one-of>
+			<tag>V='勤学楼 1009'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零幺零</item>
+				<item>勤学楼一零一零</item>
+  		</one-of>
+			<tag>V='勤学楼 1010'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零幺幺</item>
+	    	<item>勤学楼一零一一</item>
+  		</one-of>
+			<tag>V='勤学楼 1011'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零幺二</item>
+	    	<item>勤学楼一零一二</item>
+  		</one-of>
+			<tag>V='勤学楼 1012'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零幺三</item>
+	    	<item>勤学楼一零一三</item>
+  		</one-of>
+			<tag>V='勤学楼 1013'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零幺四</item>
+	    	<item>勤学楼一零一四</item>
+  		</one-of>
+			<tag>V='勤学楼 1014'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺零幺五</item>
+	    	<item>勤学楼一零一五</item>
+  		</one-of>
+			<tag>V='勤学楼 1015'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零幺</item>
+	    	<item>勤学楼一一零一</item>
+  		</one-of>
+			<tag>V='勤学楼 1101'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼幺幺零二</item>
+	    	<item>勤学楼一一零二</item>
+  		</one-of>
+			<tag>V='勤学楼 1102'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零三</item>
+	    	<item>勤学楼一一零三</item>
+  		</one-of>
+			<tag>V='勤学楼 1103'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零四</item>
+				<item>勤学楼一一零四</item>
+  		</one-of>
+			<tag>V='勤学楼 1104'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零五</item>
+	    	<item>勤学楼一一零五</item>
+  		</one-of>
+			<tag>V='勤学楼 1105'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零六</item>
+	    	<item>勤学楼一一零六</item>
+  		</one-of>
+			<tag>V='勤学楼 1106'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零七</item>
+	    	<item>勤学楼一一零七</item>
+  		</one-of>
+			<tag>V='勤学楼 1107'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零八</item>
+	    	<item>勤学楼一一零八</item>
+  		</one-of>
+			<tag>V='勤学楼 1108'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺零九</item>
+	    	<item>勤学楼一一零九</item>
+  		</one-of>
+			<tag>V='勤学楼 1109'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺幺零</item>
+				<item>勤学楼一一一零</item>
+  		</one-of>
+			<tag>V='勤学楼 1110'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺幺幺</item>
+	    	<item>勤学楼一一一一</item>
+  		</one-of>
+			<tag>V='勤学楼 1111'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺幺二</item>
+	    	<item>勤学楼一一一二</item>
+  		</one-of>
+			<tag>V='勤学楼 1112'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺幺三</item>
+	    	<item>勤学楼一一一三</item>
+  		</one-of>
+			<tag>V='勤学楼 1113'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺幺四</item>
+	    	<item>勤学楼一一一四</item>
+  		</one-of>
+			<tag>V='勤学楼 1114'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺幺幺五</item>
+	    	<item>勤学楼一一一五</item>
+  		</one-of>
+			<tag>V='勤学楼 1115'</tag>
+		</item>
+  
+  
+  
+  
+  	<item>
+			<one-of>
+				<item>勤学楼幺二零幺</item>
+	    	<item>勤学楼一二零一</item>
+  		</one-of>
+			<tag>V='勤学楼 1201'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼幺二零二</item>
+	    	<item>勤学楼一二零二</item>
+  		</one-of>
+			<tag>V='勤学楼 1202'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二零三</item>
+	    	<item>勤学楼一二零三</item>
+  		</one-of>
+			<tag>V='勤学楼 1203'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二零四</item>
+				<item>勤学楼一二零四</item>
+  		</one-of>
+			<tag>V='勤学楼 1204'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二零五</item>
+	    	<item>勤学楼一二零五</item>
+  		</one-of>
+			<tag>V='勤学楼 1205'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二零六</item>
+	    	<item>勤学楼一二零六</item>
+  		</one-of>
+			<tag>V='勤学楼 1206'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二零七</item>
+	    	<item>勤学楼一二零七</item>
+  		</one-of>
+			<tag>V='勤学楼 1207'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二零八</item>
+	    	<item>勤学楼一二零八</item>
+  		</one-of>
+			<tag>V='勤学楼 1208'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二零九</item>
+	    	<item>勤学楼一二零九</item>
+  		</one-of>
+			<tag>V='勤学楼 1209'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二幺零</item>
+				<item>勤学楼一二一零</item>
+  		</one-of>
+			<tag>V='勤学楼 1210'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二幺幺</item>
+	    	<item>勤学楼一二一一</item>
+  		</one-of>
+			<tag>V='勤学楼 1211'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二幺二</item>
+	    	<item>勤学楼一二一二</item>
+  		</one-of>
+			<tag>V='勤学楼 1212'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二幺三</item>
+	    	<item>勤学楼一二一三</item>
+  		</one-of>
+			<tag>V='勤学楼 1213'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二幺四</item>
+	    	<item>勤学楼一二一四</item>
+  		</one-of>
+			<tag>V='勤学楼 1214'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺二幺五</item>
+	    	<item>勤学楼一二一五</item>
+  		</one-of>
+			<tag>V='勤学楼 1215'</tag>
+		</item>
+  
+  
+  
+  
+  	<item>
+			<one-of>
+				<item>勤学楼幺三零幺</item>
+	    	<item>勤学楼一三零一</item>
+  		</one-of>
+			<tag>V='勤学楼 1301'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼幺三零二</item>
+	    	<item>勤学楼一三零二</item>
+  		</one-of>
+			<tag>V='勤学楼 1302'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三零三</item>
+	    	<item>勤学楼一三零三</item>
+  		</one-of>
+			<tag>V='勤学楼 1303'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三零四</item>
+				<item>勤学楼一三零四</item>
+  		</one-of>
+			<tag>V='勤学楼 1304'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三零五</item>
+	    	<item>勤学楼一三零五</item>
+  		</one-of>
+			<tag>V='勤学楼 1305'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三零六</item>
+	    	<item>勤学楼一三零六</item>
+  		</one-of>
+			<tag>V='勤学楼 1306'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三零七</item>
+	    	<item>勤学楼一三零七</item>
+  		</one-of>
+			<tag>V='勤学楼 1307'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三零八</item>
+	    	<item>勤学楼一三零八</item>
+  		</one-of>
+			<tag>V='勤学楼 1308'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三零九</item>
+	    	<item>勤学楼一三零九</item>
+  		</one-of>
+			<tag>V='勤学楼 1309'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三幺零</item>
+				<item>勤学楼一三一零</item>
+  		</one-of>
+			<tag>V='勤学楼 1310'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三幺幺</item>
+	    	<item>勤学楼一三一一</item>
+  		</one-of>
+			<tag>V='勤学楼 1311'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三幺二</item>
+	    	<item>勤学楼一三一二</item>
+  		</one-of>
+			<tag>V='勤学楼 1312'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三幺三</item>
+	    	<item>勤学楼一三一三</item>
+  		</one-of>
+			<tag>V='勤学楼 1313'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三幺四</item>
+	    	<item>勤学楼一三一四</item>
+  		</one-of>
+			<tag>V='勤学楼 1314'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺三幺五</item>
+	    	<item>勤学楼一三一五</item>
+  		</one-of>
+			<tag>V='勤学楼 1315'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零幺</item>
+	    	<item>勤学楼一四零一</item>
+  		</one-of>
+			<tag>V='勤学楼 1401'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼幺四零二</item>
+	    	<item>勤学楼一四零二</item>
+  		</one-of>
+			<tag>V='勤学楼 1402'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零三</item>
+	    	<item>勤学楼一四零三</item>
+  		</one-of>
+			<tag>V='勤学楼 1403'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零四</item>
+				<item>勤学楼一四零四</item>
+  		</one-of>
+			<tag>V='勤学楼 1404'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零五</item>
+	    	<item>勤学楼一四零五</item>
+  		</one-of>
+			<tag>V='勤学楼 1405'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零六</item>
+	    	<item>勤学楼一四零六</item>
+  		</one-of>
+			<tag>V='勤学楼 1406'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零七</item>
+	    	<item>勤学楼一四零七</item>
+  		</one-of>
+			<tag>V='勤学楼 1407'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零八</item>
+	    	<item>勤学楼一四零八</item>
+  		</one-of>
+			<tag>V='勤学楼 1408'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四零九</item>
+	    	<item>勤学楼一四零九</item>
+  		</one-of>
+			<tag>V='勤学楼 1409'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四幺零</item>
+				<item>勤学楼一四一零</item>
+  		</one-of>
+			<tag>V='勤学楼 1410'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四幺幺</item>
+	    	<item>勤学楼一四一一</item>
+  		</one-of>
+			<tag>V='勤学楼 1411'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四幺二</item>
+	    	<item>勤学楼一四一二</item>
+  		</one-of>
+			<tag>V='勤学楼 1412'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四幺三</item>
+	    	<item>勤学楼一四一三</item>
+  		</one-of>
+			<tag>V='勤学楼 1413'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四幺四</item>
+	    	<item>勤学楼一四一四</item>
+  		</one-of>
+			<tag>V='勤学楼 1414'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺四幺五</item>
+	    	<item>勤学楼一四一五</item>
+  		</one-of>
+			<tag>V='勤学楼 1415'</tag>
+		</item>    
+		
+		
+		
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零幺</item>
+	    	<item>勤学楼一五零一</item>
+  		</one-of>
+			<tag>V='勤学楼 1501'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>勤学楼幺五零二</item>
+	    	<item>勤学楼一五零二</item>
+  		</one-of>
+			<tag>V='勤学楼 1502'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零三</item>
+	    	<item>勤学楼一五零三</item>
+  		</one-of>
+			<tag>V='勤学楼 1503'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零四</item>
+				<item>勤学楼一五零四</item>
+  		</one-of>
+			<tag>V='勤学楼 1504'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零五</item>
+	    	<item>勤学楼一五零五</item>
+  		</one-of>
+			<tag>V='勤学楼 1505'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零六</item>
+	    	<item>勤学楼一五零六</item>
+  		</one-of>
+			<tag>V='勤学楼 1506'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零七</item>
+	    	<item>勤学楼一五零七</item>
+  		</one-of>
+			<tag>V='勤学楼 1507'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零八</item>
+	    	<item>勤学楼一五零八</item>
+  		</one-of>
+			<tag>V='勤学楼 1508'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五零九</item>
+	    	<item>勤学楼一五零九</item>
+  		</one-of>
+			<tag>V='勤学楼 1509'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五幺零</item>
+				<item>勤学楼一五一零</item>
+  		</one-of>
+			<tag>V='勤学楼 1510'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五幺幺</item>
+	    	<item>勤学楼一五一一</item>
+  		</one-of>
+			<tag>V='勤学楼 1511'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五幺二</item>
+	    	<item>勤学楼一五一二</item>
+  		</one-of>
+			<tag>V='勤学楼 1512'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五幺三</item>
+	    	<item>勤学楼一五一三</item>
+  		</one-of>
+			<tag>V='勤学楼 1513'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五幺四</item>
+	    	<item>勤学楼一五一四</item>
+  		</one-of>
+			<tag>V='勤学楼 1514'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>勤学楼幺五幺五</item>
+	    	<item>勤学楼一五一五</item>
+  		</one-of>
+			<tag>V='勤学楼1515'</tag>
+		</item>
+  
+  
+  
+  
+
+		<item>
+			<one-of>
+	    	<item>二十六栋二零二</item>
+  		</one-of>
+			<tag>V='26栋 202'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋二零三</item>
+  		</one-of>
+			<tag>V='26栋 203'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋二零四</item>
+  		</one-of>
+			<tag>V='26栋 204'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋二零五</item>
+  		</one-of>
+			<tag>V='26栋 205'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋二零六</item>
+  		</one-of>
+			<tag>V='26栋 206'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋二零七</item>
+  		</one-of>
+			<tag>V='26栋 207'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋二零八</item>
+  		</one-of>
+			<tag>V='26栋 208'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋二零九</item>
+  		</one-of>
+			<tag>V='26栋 209'</tag>
+		</item>
+			
+		
+		
+		
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零二</item>
+  		</one-of>
+			<tag>V='26栋 302'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零三</item>
+  		</one-of>
+			<tag>V='26栋 303'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零四</item>
+  		</one-of>
+			<tag>V='26栋 304'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零五</item>
+  		</one-of>
+			<tag>V='26栋 305'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零六</item>
+  		</one-of>
+			<tag>V='26栋 306'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零七</item>
+  		</one-of>
+			<tag>V='26栋 307'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零八</item>
+  		</one-of>
+			<tag>V='26栋 308'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋三零九</item>
+  		</one-of>
+			<tag>V='26栋 309'</tag>
+		</item>
+		
+		
+		
+		
+
+		<item>
+			<one-of>
+	    	<item>二十六栋四零二</item>
+  		</one-of>
+			<tag>V='26栋 402'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋四零三</item>
+  		</one-of>
+			<tag>V='26栋 403'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋四零四</item>
+  		</one-of>
+			<tag>V='26栋 404'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋四零五</item>
+  		</one-of>
+			<tag>V='26栋 405'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋四零六</item>
+  		</one-of>
+			<tag>V='26栋 406'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋四零七</item>
+  		</one-of>
+			<tag>V='26栋 407'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋四零八</item>
+  		</one-of>
+			<tag>V='26栋 408'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋四零九</item>
+  		</one-of>
+			<tag>V='26栋 409'</tag>
+		</item>
+
+	
+		
+		
+
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零二</item>
+  		</one-of>
+			<tag>V='26栋 502'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零三</item>
+  		</one-of>
+			<tag>V='26栋 503'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零四</item>
+  		</one-of>
+			<tag>V='26栋 504'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零五</item>
+  		</one-of>
+			<tag>V='26栋 505'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零六</item>
+  		</one-of>
+			<tag>V='26栋 506'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零七</item>
+  		</one-of>
+			<tag>V='26栋 507'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零八</item>
+  		</one-of>
+			<tag>V='26栋 508'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋五零九</item>
+  		</one-of>
+			<tag>V='26栋 509'</tag>
+		</item>
+		
+
+	
+
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零二</item>
+  		</one-of>
+			<tag>V='26栋 602'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零三</item>
+  		</one-of>
+			<tag>V='26栋 603'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零四</item>
+  		</one-of>
+			<tag>V='26栋 604'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零五</item>
+  		</one-of>
+			<tag>V='26栋 605'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零六</item>
+  		</one-of>
+			<tag>V='26栋 606'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零七</item>
+  		</one-of>
+			<tag>V='26栋 607'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零八</item>
+  		</one-of>
+			<tag>V='26栋 608'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十六栋六零九</item>
+  		</one-of>
+			<tag>V='26栋 609'</tag>
+		</item>
+     	  
+	
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零二</item>
+  		</one-of>
+			<tag>V='27栋 202'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零三</item>
+  		</one-of>
+			<tag>V='27栋 203'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零四</item>
+  		</one-of>
+			<tag>V='27栋 204'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零五</item>
+  		</one-of>
+			<tag>V='27栋 205'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零六</item>
+  		</one-of>
+			<tag>V='27栋 206'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零七</item>
+  		</one-of>
+			<tag>V='27栋 207'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零八</item>
+  		</one-of>
+			<tag>V='27栋 208'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋二零九</item>
+  		</one-of>
+			<tag>V='27栋 209'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二十七栋二幺零</item>
+	    	<item>二十七栋二一零</item>
+  		</one-of>
+			<tag>V='27栋 210'</tag>
+		</item>
+		
+
+		
+		
+			
+		<item>
+			<one-of>
+	    	<item>二十七栋三零二</item>
+  		</one-of>
+			<tag>V='27栋 302'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋三零三</item>
+  		</one-of>
+			<tag>V='27栋 303'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋三零四</item>
+  		</one-of>
+			<tag>V='27栋 304'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋三零五</item>
+  		</one-of>
+			<tag>V='27栋 305'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋三零六</item>
+  		</one-of>
+			<tag>V='27栋 306'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋三零七</item>
+  		</one-of>
+			<tag>V='27栋 307'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋三零八</item>
+  		</one-of>
+			<tag>V='27栋 308'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋三零九</item>
+  		</one-of>
+			<tag>V='27栋 309'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二十七栋三幺零</item>
+	    	<item>二十七栋三一零</item>
+  		</one-of>
+			<tag>V='27栋 310'</tag>
+		</item>
+		
+	
+		
+
+		<item>
+			<one-of>
+	    	<item>二十七栋四零二</item>
+  		</one-of>
+			<tag>V='27栋 402'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋四零三</item>
+  		</one-of>
+			<tag>V='27栋 403'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋四零四</item>
+  		</one-of>
+			<tag>V='27栋 404'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋四零五</item>
+  		</one-of>
+			<tag>V='27栋 405'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋四零六</item>
+  		</one-of>
+			<tag>V='27栋 406'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋四零七</item>
+  		</one-of>
+			<tag>V='27栋 407'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋四零八</item>
+  		</one-of>
+			<tag>V='27栋 408'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋四零九</item>
+  		</one-of>
+			<tag>V='27栋 409'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二十七栋四幺零</item>
+	    	<item>二十七栋四一零</item>
+  		</one-of>
+			<tag>V='27栋 410'</tag>
+		</item>
+		
+		
+
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零二</item>
+  		</one-of>
+			<tag>V='27栋 502'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零三</item>
+  		</one-of>
+			<tag>V='27栋 503'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零四</item>
+  		</one-of>
+			<tag>V='27栋 504'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零五</item>
+  		</one-of>
+			<tag>V='27栋 505'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零六</item>
+  		</one-of>
+			<tag>V='27栋 506'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零七</item>
+  		</one-of>
+			<tag>V='27栋 507'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零八</item>
+  		</one-of>
+			<tag>V='27栋 508'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋五零九</item>
+  		</one-of>
+			<tag>V='27栋 509'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二十七栋五幺零</item>
+	    	<item>二十七栋五一零</item>
+  		</one-of>
+			<tag>V='27栋 510'</tag>
+		</item>
+		
+	
+  
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零二</item>
+  		</one-of>
+			<tag>V='27栋 602'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零三</item>
+  		</one-of>
+			<tag>V='27栋 603'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零四</item>
+  		</one-of>
+			<tag>V='27栋 604'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零五</item>
+  		</one-of>
+			<tag>V='27栋 605'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零六</item>
+  		</one-of>
+			<tag>V='27栋 606'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零七</item>
+  		</one-of>
+			<tag>V='27栋 607'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零八</item>
+  		</one-of>
+			<tag>V='27栋 608'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋六零九</item>
+  		</one-of>
+			<tag>V='27栋 609'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二十七栋六幺零</item>
+	    	<item>二十七栋六一零</item>
+  		</one-of>
+			<tag>V='27栋 610'</tag>
+		</item>
+		
+		
+		
+		
+
+		<item>
+			<one-of>
+	    	<item>二十七栋七零二</item>
+  		</one-of>
+			<tag>V='27栋 702'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋七零三</item>
+  		</one-of>
+			<tag>V='27栋 703'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋七零四</item>
+  		</one-of>
+			<tag>V='27栋 704'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋七零五</item>
+  		</one-of>
+			<tag>V='27栋 705'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋七零六</item>
+  		</one-of>
+			<tag>V='27栋 706'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋七零七</item>
+  		</one-of>
+			<tag>V='27栋 707'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋七零八</item>
+  		</one-of>
+			<tag>V='27栋 708'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二十七栋七零九</item>
+  		</one-of>
+			<tag>V='27栋 709'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二十七栋七幺零</item>
+	    	<item>二十七栋七一零</item>
+  		</one-of>
+			<tag>V='27栋 710'</tag>
+		</item>
+		
+		
+	</one-of>
+</rule>
+
+<rule id="DIGITSTRING">
+
+  <item repeat="0-">
+     <ruleref uri="#DIGIT"/>
+     <tag>V = V ? V + DIGIT.V : DIGIT.V</tag>
+  </item>
+
+</rule>
+
+<rule id="DIGIT">
+  <one-of>
+    <item>
+    	零 <tag>V='0'</tag>
+    </item>
+    
+    <item>
+    	<one-of>
+		  	<item>一</item>
+		  	<item>幺</item>
+		  	<item>十</item>
+			</one-of>
+      <tag>V='1'</tag>
+    </item>
+    
+    <item>
+      二 <tag>V='2'</tag>
+    </item>
+    
+    <item>
+      三 <tag>V='3'</tag>
+    </item>
+    
+    <item>
+      四 <tag>V='4'</tag>
+    </item>
+    
+    <item>
+      五 <tag>V='5'</tag>
+    </item>
+    
+    <item>
+      六 <tag>V='6'</tag>
+    </item>
+    
+    <item>
+      七 <tag>V='7'</tag>
+    </item>
+    
+    <item>
+      八 <tag>V='8'</tag>
+    </item>
+    
+    <item>
+      九 <tag>V='9'</tag>
+    </item>
+    
+  </one-of>
+</rule>
+
+
+<rule id="NUMBER">
+	<one-of>
+
+		<item>
+			<one-of>
+				<item>二零幺</item>
+	    	<item>二零一</item>
+  		</one-of>
+			<tag>V='201'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零二</item>
+  		</one-of>
+			<tag>V='202'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零三</item>
+  		</one-of>
+			<tag>V='203'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零四</item>
+  		</one-of>
+			<tag>V='204'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零五</item>
+  		</one-of>
+			<tag>V='205'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零六</item>
+  		</one-of>
+			<tag>V='206'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零七</item>
+  		</one-of>
+			<tag>V='207'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零八</item>
+  		</one-of>
+			<tag>V='208'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>二零九</item>
+  		</one-of>
+			<tag>V='209'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二幺零</item>
+	    	<item>二一零</item>
+  		</one-of>
+			<tag>V='210'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二幺幺</item>
+	    	<item>二一一</item>
+  		</one-of>
+			<tag>V='211'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二幺二</item>
+	    	<item>二一二</item>
+  		</one-of>
+			<tag>V='212'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二幺三</item>
+	    	<item>二一三</item>
+  		</one-of>
+			<tag>V='213'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二幺四</item>
+	    	<item>二一四</item>
+  		</one-of>
+			<tag>V='214'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>二幺五</item>
+	    	<item>二一五</item>
+  		</one-of>
+			<tag>V='215'</tag>
+		</item>
+		
+		
+		
+		
+		<item>
+			<one-of>
+				<item>三零幺</item>
+	    	<item>三零一</item>
+  		</one-of>
+			<tag>V='301'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零二</item>
+  		</one-of>
+			<tag>V='302'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零三</item>
+  		</one-of>
+			<tag>V='303'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零四</item>
+  		</one-of>
+			<tag>V='304'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零五</item>
+  		</one-of>
+			<tag>V='305'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零六</item>
+  		</one-of>
+			<tag>V='306'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零七</item>
+  		</one-of>
+			<tag>V='307'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零八</item>
+  		</one-of>
+			<tag>V='308'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>三零九</item>
+  		</one-of>
+			<tag>V='309'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>三幺零</item>
+	    	<item>三一零</item>
+  		</one-of>
+			<tag>V='310'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>三幺幺</item>
+	    	<item>三一一</item>
+  		</one-of>
+			<tag>V='311'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>三幺二</item>
+	    	<item>三一二</item>
+  		</one-of>
+			<tag>V='312'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>三幺三</item>
+	    	<item>三一三</item>
+  		</one-of>
+			<tag>V='313'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>三幺四</item>
+	    	<item>三一四</item>
+  		</one-of>
+			<tag>V='314'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>三幺五</item>
+	    	<item>三一五</item>
+  		</one-of>
+			<tag>V='315'</tag>
+		</item>
+		
+		
+		
+		
+		<item>
+			<one-of>
+				<item>四零幺</item>
+	    	<item>四零一</item>
+  		</one-of>
+			<tag>V='401'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零二</item>
+  		</one-of>
+			<tag>V='402'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零三</item>
+  		</one-of>
+			<tag>V='403'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零四</item>
+  		</one-of>
+			<tag>V='404'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零五</item>
+  		</one-of>
+			<tag>V='405'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零六</item>
+  		</one-of>
+			<tag>V='406'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零七</item>
+  		</one-of>
+			<tag>V='407'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零八</item>
+  		</one-of>
+			<tag>V='408'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>四零九</item>
+  		</one-of>
+			<tag>V='409'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>四幺零</item>
+	    	<item>四一零</item>
+  		</one-of>
+			<tag>V='410'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>四幺幺</item>
+	    	<item>四一一</item>
+  		</one-of>
+			<tag>V='411'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>四幺二</item>
+	    	<item>四一二</item>
+  		</one-of>
+			<tag>V='412'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>四幺三</item>
+	    	<item>四一三</item>
+  		</one-of>
+			<tag>V='413'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>四幺四</item>
+	    	<item>四一四</item>
+  		</one-of>
+			<tag>V='414'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>四幺五</item>
+	    	<item>四一五</item>
+  		</one-of>
+			<tag>V='415'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>五零幺</item>
+	    	<item>五零一</item>
+  		</one-of>
+			<tag>V='501'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零二</item>
+  		</one-of>
+			<tag>V='502'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零三</item>
+  		</one-of>
+			<tag>V='503'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零四</item>
+  		</one-of>
+			<tag>V='504'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零五</item>
+  		</one-of>
+			<tag>V='505'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零六</item>
+  		</one-of>
+			<tag>V='506'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零七</item>
+  		</one-of>
+			<tag>V='507'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零八</item>
+  		</one-of>
+			<tag>V='508'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>五零九</item>
+  		</one-of>
+			<tag>V='509'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>五幺零</item>
+	    	<item>五一零</item>
+  		</one-of>
+			<tag>V='510'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>五幺幺</item>
+	    	<item>五一一</item>
+  		</one-of>
+			<tag>V='511'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>五幺二</item>
+	    	<item>五一二</item>
+  		</one-of>
+			<tag>V='512'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>五幺三</item>
+	    	<item>五一三</item>
+  		</one-of>
+			<tag>V='513'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>五幺四</item>
+	    	<item>五一四</item>
+  		</one-of>
+			<tag>V='514'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>五幺五</item>
+	    	<item>五一五</item>
+  		</one-of>
+			<tag>V='515'</tag>
+		</item>
+		
+		
+			<item>
+			<one-of>
+				<item>六零幺</item>
+	    	<item>六零一</item>
+  		</one-of>
+			<tag>V='601'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零二</item>
+  		</one-of>
+			<tag>V='602'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零三</item>
+  		</one-of>
+			<tag>V='603'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零四</item>
+  		</one-of>
+			<tag>V='604'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零五</item>
+  		</one-of>
+			<tag>V='605'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零六</item>
+  		</one-of>
+			<tag>V='606'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零七</item>
+  		</one-of>
+			<tag>V='607'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零八</item>
+  		</one-of>
+			<tag>V='608'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>六零九</item>
+  		</one-of>
+			<tag>V='609'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>六幺零</item>
+	    	<item>六一零</item>
+  		</one-of>
+			<tag>V='610'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>六幺幺</item>
+	    	<item>六一一</item>
+  		</one-of>
+			<tag>V='611'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>六幺二</item>
+	    	<item>六一二</item>
+  		</one-of>
+			<tag>V='612'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>六幺三</item>
+	    	<item>六一三</item>
+  		</one-of>
+			<tag>V='613'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>六幺四</item>
+	    	<item>六一四</item>
+  		</one-of>
+			<tag>V='614'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>六幺五</item>
+	    	<item>六一五</item>
+  		</one-of>
+			<tag>V='615'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>七零幺</item>
+	    	<item>七零一</item>
+  		</one-of>
+			<tag>V='701'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零二</item>
+  		</one-of>
+			<tag>V='702'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零三</item>
+  		</one-of>
+			<tag>V='703'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零四</item>
+  		</one-of>
+			<tag>V='704'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零五</item>
+  		</one-of>
+			<tag>V='705'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零六</item>
+  		</one-of>
+			<tag>V='706'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零七</item>
+  		</one-of>
+			<tag>V='707'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零八</item>
+  		</one-of>
+			<tag>V='708'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>七零九</item>
+  		</one-of>
+			<tag>V='709'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>七幺零</item>
+	    	<item>七一零</item>
+  		</one-of>
+			<tag>V='710'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>七幺幺</item>
+	    	<item>七一一</item>
+  		</one-of>
+			<tag>V='711'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>七幺二</item>
+	    	<item>七一二</item>
+  		</one-of>
+			<tag>V='712'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>七幺三</item>
+	    	<item>七一三</item>
+  		</one-of>
+			<tag>V='713'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>七幺四</item>
+	    	<item>七一四</item>
+  		</one-of>
+			<tag>V='714'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>七幺五</item>
+	    	<item>七一五</item>
+  		</one-of>
+			<tag>V='715'</tag>
+		</item>
+  
+  	
+  	
+  	<item>
+			<one-of>
+				<item>八零幺</item>
+	    	<item>八零一</item>
+  		</one-of>
+			<tag>V='801'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零二</item>
+  		</one-of>
+			<tag>V='802'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零三</item>
+  		</one-of>
+			<tag>V='803'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零四</item>
+  		</one-of>
+			<tag>V='804'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零五</item>
+  		</one-of>
+			<tag>V='805'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零六</item>
+  		</one-of>
+			<tag>V='806'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零七</item>
+  		</one-of>
+			<tag>V='807'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零八</item>
+  		</one-of>
+			<tag>V='808'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>八零九</item>
+  		</one-of>
+			<tag>V='809'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>八幺零</item>
+	    	<item>八一零</item>
+  		</one-of>
+			<tag>V='810'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>八幺幺</item>
+	    	<item>八一一</item>
+  		</one-of>
+			<tag>V='811'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>八幺二</item>
+	    	<item>八一二</item>
+  		</one-of>
+			<tag>V='812'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>八幺三</item>
+	    	<item>八一三</item>
+  		</one-of>
+			<tag>V='813'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>八幺四</item>
+	    	<item>八一四</item>
+  		</one-of>
+			<tag>V='814'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>八幺五</item>
+	    	<item>八一五</item>
+  		</one-of>
+			<tag>V='815'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>九零幺</item>
+	    	<item>九零一</item>
+  		</one-of>
+			<tag>V='901'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零二</item>
+  		</one-of>
+			<tag>V='902'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零三</item>
+  		</one-of>
+			<tag>V='903'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零四</item>
+  		</one-of>
+			<tag>V='904'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零五</item>
+  		</one-of>
+			<tag>V='905'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零六</item>
+  		</one-of>
+			<tag>V='906'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零七</item>
+  		</one-of>
+			<tag>V='907'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零八</item>
+  		</one-of>
+			<tag>V='908'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>九零九</item>
+  		</one-of>
+			<tag>V='909'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>九幺零</item>
+	    	<item>九一零</item>
+  		</one-of>
+			<tag>V='910'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>九幺幺</item>
+	    	<item>九一一</item>
+  		</one-of>
+			<tag>V='911'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>九幺二</item>
+	    	<item>九一二</item>
+  		</one-of>
+			<tag>V='912'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>九幺三</item>
+	    	<item>九一三</item>
+  		</one-of>
+			<tag>V='913'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>九幺四</item>
+	    	<item>九一四</item>
+  		</one-of>
+			<tag>V='914'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>九幺五</item>
+	    	<item>九一五</item>
+  		</one-of>
+			<tag>V='915'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>幺零零幺</item>
+	    	<item>一零零一</item>
+  		</one-of>
+			<tag>V='1001'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>幺零零二</item>
+	    	<item>一零零二</item>
+  		</one-of>
+			<tag>V='1002'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零零三</item>
+	    	<item>一零零三</item>
+  		</one-of>
+			<tag>V='1003'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零零四</item>
+				<item>一零零四</item>
+  		</one-of>
+			<tag>V='1004'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零零五</item>
+	    	<item>一零零五</item>
+  		</one-of>
+			<tag>V='1005'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零零六</item>
+	    	<item>一零零六</item>
+  		</one-of>
+			<tag>V='1006'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零零七</item>
+	    	<item>一零零七</item>
+  		</one-of>
+			<tag>V='1007'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零零八</item>
+	    	<item>一零零八</item>
+  		</one-of>
+			<tag>V='1008'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零零九</item>
+	    	<item>一零零九</item>
+  		</one-of>
+			<tag>V='1009'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零幺零</item>
+				<item>一零一零</item>
+  		</one-of>
+			<tag>V='1010'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零幺幺</item>
+	    	<item>一零一一</item>
+  		</one-of>
+			<tag>V='1011'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零幺二</item>
+	    	<item>一零一二</item>
+  		</one-of>
+			<tag>V='1012'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零幺三</item>
+	    	<item>一零一三</item>
+  		</one-of>
+			<tag>V='1013'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零幺四</item>
+	    	<item>一零一四</item>
+  		</one-of>
+			<tag>V='1014'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺零幺五</item>
+	    	<item>一零一五</item>
+  		</one-of>
+			<tag>V='1015'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>幺幺零幺</item>
+	    	<item>一一零一</item>
+  		</one-of>
+			<tag>V='1101'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>幺幺零二</item>
+	    	<item>一一零二</item>
+  		</one-of>
+			<tag>V='1102'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺零三</item>
+	    	<item>一一零三</item>
+  		</one-of>
+			<tag>V='1103'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺零四</item>
+				<item>一一零四</item>
+  		</one-of>
+			<tag>V='1104'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺零五</item>
+	    	<item>一一零五</item>
+  		</one-of>
+			<tag>V='1105'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺零六</item>
+	    	<item>一一零六</item>
+  		</one-of>
+			<tag>V='1106'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺零七</item>
+	    	<item>一一零七</item>
+  		</one-of>
+			<tag>V='1107'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺零八</item>
+	    	<item>一一零八</item>
+  		</one-of>
+			<tag>V='1108'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺零九</item>
+	    	<item>一一零九</item>
+  		</one-of>
+			<tag>V='1109'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺幺零</item>
+				<item>一一一零</item>
+  		</one-of>
+			<tag>V='1110'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺幺幺</item>
+	    	<item>一一一一</item>
+  		</one-of>
+			<tag>V='1111'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺幺二</item>
+	    	<item>一一一二</item>
+  		</one-of>
+			<tag>V='1112'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺幺三</item>
+	    	<item>一一一三</item>
+  		</one-of>
+			<tag>V='1113'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺幺四</item>
+	    	<item>一一一四</item>
+  		</one-of>
+			<tag>V='1114'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺幺幺五</item>
+	    	<item>一一一五</item>
+  		</one-of>
+			<tag>V='1115'</tag>
+		</item>
+  
+  
+  
+  
+  	<item>
+			<one-of>
+				<item>幺二零幺</item>
+	    	<item>一二零一</item>
+  		</one-of>
+			<tag>V='1201'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>幺二零二</item>
+	    	<item>一二零二</item>
+  		</one-of>
+			<tag>V='1202'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二零三</item>
+	    	<item>一二零三</item>
+  		</one-of>
+			<tag>V='1203'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二零四</item>
+				<item>一二零四</item>
+  		</one-of>
+			<tag>V='1204'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二零五</item>
+	    	<item>一二零五</item>
+  		</one-of>
+			<tag>V='1205'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二零六</item>
+	    	<item>一二零六</item>
+  		</one-of>
+			<tag>V='1206'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二零七</item>
+	    	<item>一二零七</item>
+  		</one-of>
+			<tag>V='1207'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二零八</item>
+	    	<item>一二零八</item>
+  		</one-of>
+			<tag>V='1208'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二零九</item>
+	    	<item>一二零九</item>
+  		</one-of>
+			<tag>V='1209'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二幺零</item>
+				<item>一二一零</item>
+  		</one-of>
+			<tag>V='1210'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二幺幺</item>
+	    	<item>一二一一</item>
+  		</one-of>
+			<tag>V='1211'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二幺二</item>
+	    	<item>一二一二</item>
+  		</one-of>
+			<tag>V='1212'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二幺三</item>
+	    	<item>一二一三</item>
+  		</one-of>
+			<tag>V='1213'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二幺四</item>
+	    	<item>一二一四</item>
+  		</one-of>
+			<tag>V='1214'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺二幺五</item>
+	    	<item>一二一五</item>
+  		</one-of>
+			<tag>V='1215'</tag>
+		</item>
+  
+  
+  
+  
+  	<item>
+			<one-of>
+				<item>幺三零幺</item>
+	    	<item>一三零一</item>
+  		</one-of>
+			<tag>V='1301'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>幺三零二</item>
+	    	<item>一三零二</item>
+  		</one-of>
+			<tag>V='1302'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三零三</item>
+	    	<item>一三零三</item>
+  		</one-of>
+			<tag>V='1303'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三零四</item>
+				<item>一三零四</item>
+  		</one-of>
+			<tag>V='1304'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三零五</item>
+	    	<item>一三零五</item>
+  		</one-of>
+			<tag>V='1305'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三零六</item>
+	    	<item>一三零六</item>
+  		</one-of>
+			<tag>V='1306'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三零七</item>
+	    	<item>一三零七</item>
+  		</one-of>
+			<tag>V='1307'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三零八</item>
+	    	<item>一三零八</item>
+  		</one-of>
+			<tag>V='1308'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三零九</item>
+	    	<item>一三零九</item>
+  		</one-of>
+			<tag>V='1309'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三幺零</item>
+				<item>一三一零</item>
+  		</one-of>
+			<tag>V='1310'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三幺幺</item>
+	    	<item>一三一一</item>
+  		</one-of>
+			<tag>V='1311'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三幺二</item>
+	    	<item>一三一二</item>
+  		</one-of>
+			<tag>V='1312'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三幺三</item>
+	    	<item>一三一三</item>
+  		</one-of>
+			<tag>V='1313'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三幺四</item>
+	    	<item>一三一四</item>
+  		</one-of>
+			<tag>V='1314'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺三幺五</item>
+	    	<item>一三一五</item>
+  		</one-of>
+			<tag>V='1315'</tag>
+		</item>
+		
+		
+		
+		<item>
+			<one-of>
+				<item>幺四零幺</item>
+	    	<item>一四零一</item>
+  		</one-of>
+			<tag>V='1401'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>幺四零二</item>
+	    	<item>一四零二</item>
+  		</one-of>
+			<tag>V='1402'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四零三</item>
+	    	<item>一四零三</item>
+  		</one-of>
+			<tag>V='1403'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四零四</item>
+				<item>一四零四</item>
+  		</one-of>
+			<tag>V='1404'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四零五</item>
+	    	<item>一四零五</item>
+  		</one-of>
+			<tag>V='1405'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四零六</item>
+	    	<item>一四零六</item>
+  		</one-of>
+			<tag>V='1406'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四零七</item>
+	    	<item>一四零七</item>
+  		</one-of>
+			<tag>V='1407'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四零八</item>
+	    	<item>一四零八</item>
+  		</one-of>
+			<tag>V='1408'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四零九</item>
+	    	<item>一四零九</item>
+  		</one-of>
+			<tag>V='1409'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四幺零</item>
+				<item>一四一零</item>
+  		</one-of>
+			<tag>V='1410'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四幺幺</item>
+	    	<item>一四一一</item>
+  		</one-of>
+			<tag>V='1411'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四幺二</item>
+	    	<item>一四一二</item>
+  		</one-of>
+			<tag>V='1412'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四幺三</item>
+	    	<item>一四一三</item>
+  		</one-of>
+			<tag>V='1413'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四幺四</item>
+	    	<item>一四一四</item>
+  		</one-of>
+			<tag>V='1414'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺四幺五</item>
+	    	<item>一四一五</item>
+  		</one-of>
+			<tag>V='1415'</tag>
+		</item>    
+		
+		
+		
+		
+		<item>
+			<one-of>
+				<item>幺五零幺</item>
+	    	<item>一五零一</item>
+  		</one-of>
+			<tag>V='1501'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+	    	<item>幺五零二</item>
+	    	<item>一五零二</item>
+  		</one-of>
+			<tag>V='1502'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五零三</item>
+	    	<item>一五零三</item>
+  		</one-of>
+			<tag>V='1503'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五零四</item>
+				<item>一五零四</item>
+  		</one-of>
+			<tag>V='1504'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五零五</item>
+	    	<item>一五零五</item>
+  		</one-of>
+			<tag>V='1505'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五零六</item>
+	    	<item>一五零六</item>
+  		</one-of>
+			<tag>V='1506'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五零七</item>
+	    	<item>一五零七</item>
+  		</one-of>
+			<tag>V='1507'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五零八</item>
+	    	<item>一五零八</item>
+  		</one-of>
+			<tag>V='1508'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五零九</item>
+	    	<item>一五零九</item>
+  		</one-of>
+			<tag>V='1509'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五幺零</item>
+				<item>一五一零</item>
+  		</one-of>
+			<tag>V='1510'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五幺幺</item>
+	    	<item>一五一一</item>
+  		</one-of>
+			<tag>V='1511'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五幺二</item>
+	    	<item>一五一二</item>
+  		</one-of>
+			<tag>V='1512'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五幺三</item>
+	    	<item>一五一三</item>
+  		</one-of>
+			<tag>V='1513'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五幺四</item>
+	    	<item>一五一四</item>
+  		</one-of>
+			<tag>V='1514'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>幺五幺五</item>
+	    	<item>一五一五</item>
+  		</one-of>
+			<tag>V='1515'</tag>
+		</item>
+
+  
+ 	</one-of>
+</rule>
+
+</grammar>	

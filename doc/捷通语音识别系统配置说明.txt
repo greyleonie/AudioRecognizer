@@ -1,0 +1,21 @@
+naunce安装顺序：
+1.i386平台软件
+2.中、英文语言包
+3.lisence管理软件
+
+
+1.配置license
+
+1.1 复制rec.lic文件到安装目录C:\Program Files\Nuance\license_manager\license\
+
+1.2 运行license manager软件
+1.2.1 service/license file -> configuration using service
+1.2.2 config services -> path to the license file -> C:\Program Files\Nuance\license_manager\license\rec.lic
+1.2.3 start/stop/reread -> reread license file -> start server 
+1.2.4 service status -> perform status enquiry -> 观察”(Total of 4 licenses issued;  Total of 0 licenses in use)”
+
+2.修改配置文件
+2.1 打开C:\Program Files\Nuance\Recognizer\config\Baseline.xml
+2.2 搜索配置文件中的<param name="swirec_license_ports"> 和 <param name="swiep_license_ports">标签
+2.3 将两个标签的内容<value>96</value>改为<value>4</value>
+

@@ -1,0 +1,359 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x1L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x1L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404e4"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "广州市委党校信息网络中心\0"
+            VALUE "FileDescription", "广州市委党校故障申报自动语音服务系统\0"
+            VALUE "FileVersion", "1.00\0"
+            VALUE "InternalName", "GZSWDX\0"
+            VALUE "LegalCopyright", "Copyright (C) 2009-2011 GZSWDX\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "广州市委党校故障申报自动语音服务系统\0"
+            VALUE "ProductVersion", "1.00\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+GZSWDX DIALOG DISCARDABLE  0, 0, 346, 257
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "广州市委党校故障申报自动语音服务系统"
+CLASS "Bank"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "退出",ID_OK,289,236,50,14
+    CONTROL         "List1",IDC_STATELIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,5,332,222
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_GZSWDX              ICON    DISCARDABLE     "Bank.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "GZSWDX", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 250
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CHANNEL_NO          "通道号"
+    IDS_CHANNEL_TYPE        "通道类型"
+    IDS_FLOW                "流程状态"
+    IDS_CALLER_ID           "主叫号码"
+    IDS_TRUNK               "外线"
+    IDS_USER                "内线"
+    IDS_EMPTY               "空"
+    IDS_CH_FREE             "空闲"
+    IDS_CH_RECEIVEID        "接收主叫号码"
+    IDS_CH_WAITSECONDRING   "等待第二次振铃"
+    IDS_CH_WELCOME          "播放欢迎辞"
+    IDS_CH_ACCOUNT          "请输入8位帐号"
+    IDS_CH_PINNUMBER        "请输入6位密码"
+    IDS_CH_SELECT           "选择功能"
+    IDS_CH_LEAVEMSG         "录制留言"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CH_PLAYRESULT       "播放查询结果"
+    IDS_CH_PLAYRECORD       "播放留言"
+    IDS_CH_OFFHOOK          "摘机"
+    IDS_CH_WAITUSERONHOOK   "等待内线挂机"
+    IDS_CallerID_ERROR      "校验错"
+    IDS_RECORD              "录音"
+    IDS_PLAY_HELP           "播放提示音"
+    IDS_PLAY_GOODBYE        "播放结束音"
+    IDS_WAIT_ONHOOK         "等待外线挂机"
+    IDS_UNKNOW              "未知"
+    IDS_RECOGNIZING         "语音识别"
+    IDS_TIME                "呼叫时间"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x1L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x1L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Oriental CO.,LTD\0"
+            VALUE "FileDescription", "GZSWDX Audio Request System\0"
+            VALUE "FileVersion", "1.00\0"
+            VALUE "InternalName", "GZSWDX\0"
+            VALUE "LegalCopyright", "Copyright (C) 2009-2011 GZSWDX\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "GZSWDX Audio Request System\0"
+            VALUE "ProductVersion", "1.00\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+GZSWDX DIALOG DISCARDABLE  0, 0, 346, 257
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "GZSWDX Audio Request System"
+CLASS "Bank"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Exit",ID_OK,289,236,50,14
+    CONTROL         "List1",IDC_STATELIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,5,332,222
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_GZSWDX              ICON    DISCARDABLE     "Bank.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "GZSWDX", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 250
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CHANNEL_NO          "ChannelNo"
+    IDS_CHANNEL_TYPE        "ChannelType"
+    IDS_FLOW                "Flow"
+    IDS_CALLER_ID           "CallerID"
+    IDS_TRUNK               "Trunk"
+    IDS_USER                "User"
+    IDS_EMPTY               "Empty"
+    IDS_CH_FREE             "Free"
+    IDS_CH_RECEIVEID        "Receive CallerID."
+    IDS_CH_WAITSECONDRING   "Wait for second ring."
+    IDS_CH_WELCOME          "Welcome to GZSWDX Audio Request System"
+    IDS_CH_ACCOUNT          "Please input 8-digit account number."
+    IDS_CH_PINNUMBER        "Please input 6-digit pin number."
+    IDS_CH_SELECT           "Please select the option."
+    IDS_CH_LEAVEMSG         "Please leave your message."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CH_PLAYRESULT       "Play result."
+    IDS_CH_PLAYRECORD       "Play record."
+    IDS_CH_OFFHOOK          "Offhook"
+    IDS_CH_WAITUSERONHOOK   "Wait for user to onhook."
+    IDS_CallerID_ERROR      "CallerID error."
+    IDS_RECORD              "Record"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

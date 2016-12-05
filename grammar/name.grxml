@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='GBK'?>
+<grammar xml:lang="zh-cn" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="Name">
+
+<meta name="incompletetimeout" content="1500"/>
+
+<!-- [喂][你好][我叫] <郭瑞> [啊]   -->
+
+<rule id="Name">
+	<item> 
+		<ruleref uri="#Sentence"/>
+		<tag>
+			SWI_literal = Sentence.V
+		</tag>
+	</item>
+</rule>
+
+
+<rule id="Sentence">
+	<item repeat="0-"> 
+		<ruleref uri="#Reserved"/>
+		<tag>R1 = Reserved.V</tag> 
+	</item>
+
+	<item repeat="1"> 
+		<ruleref uri="#NameChoose"/>
+		<tag>V = NameChoose.V</tag> 
+	</item>
+	
+	<item repeat="0-"> 
+		<ruleref uri="#Reserved"/>
+		<tag>R2 = Reserved.V</tag> 
+	</item>
+</rule>
+
+<rule id="NameChoose">
+
+	<item repeat="0-"> 
+		<ruleref uri="#Student"/>
+		<tag>V = Student.V</tag> 
+	</item>
+	
+	<item repeat="0-"> 
+		<ruleref uri="#Staff"/>
+		<tag>V = Staff.V</tag> 
+	</item>
+	
+</rule>
+
+
+<rule id="Reserved">
+	<one-of>
+		<item>呃</item>
+		<item>嗯</item>
+		<item>喂</item>
+		<item>你好</item>
+		<item>我是</item>
+		<item>我叫</item>
+		<item>啊</item>
+	</one-of>
+	<tag>V = ' '</tag>
+</rule>
+
+
+<rule id="Staff">
+	<one-of>
+
+<!-- 工作人员 -->
+<!--
+		<item>
+			<one-of>
+				<item>王永平</item>
+				<item>王校长</item>
+			</one-of>
+			<tag>V='王永平'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>李俐</item>
+				<item>李校长</item>
+			</one-of>
+			<tag>V='李俐'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>陈治桃</item>
+				<item>陈校长</item>
+			</one-of>
+			<tag>V='陈治桃'</tag>
+		</item>
+		
+		<item>
+			<one-of>
+				<item>丁旭光</item>
+				<item>丁校长</item>
+			</one-of>
+			<tag>V='丁旭光'</tag>
+		</item>
+		
+
+		<item>单良<tag>V='单良'</tag></item>
+		<item>曲波<tag>V='曲波'</tag></item>
+-->
+		<item>孙瑞龙<tag>V='孙瑞龙'</tag></item>
+		<item>李振远<tag>V='李振远'</tag></item>
+		<item>杨玉斌<tag>V='杨玉斌'</tag></item>
+		
+		<item>李成滔<tag>V='李成滔'</tag></item>
+		<item>周文晖<tag>V='周文晖'</tag></item>
+		<item>萧溢良<tag>V='萧溢良'</tag></item>
+		<item>徐永仲<tag>V='徐永仲'</tag></item>
+		<item>马金艳<tag>V='马金艳'</tag></item>
+		<item>周炳南<tag>V='周炳南'</tag></item>
+		<item>刘永刚<tag>V='刘永刚'</tag></item>
+		<item>曹冠洪<tag>V='曹冠洪'</tag></item>
+		<item>崔海文<tag>V='崔海文'</tag></item>
+		
+		<item>黄赞崇<tag>V='黄赞崇'</tag></item>
+		<item>刘洁<tag>V='刘洁'</tag></item>
+		<item>王鹏<tag>V='王鹏'</tag></item>
+		<item>蔡婷婷<tag>V='蔡婷婷'</tag></item>
+		<item>杨丽<tag>V='杨丽'</tag></item>
+
+		<item>刘晓兵<tag>V='刘晓兵'</tag></item>
+		<item>江卫星<tag>V='江卫星'</tag></item>
+		<item>郭春光<tag>V='郭春光'</tag></item>
+	
+		<item>陈东旭<tag>V='陈东旭'</tag></item>
+		<item>许伟健<tag>V='许伟健'</tag></item>
+		<item>李秀风<tag>V='李秀风'</tag></item>
+		<item>梁秉文<tag>V='梁秉文'</tag></item>
+		<item>张达强<tag>V='张达强'</tag></item>
+		<item>林铸敏<tag>V='林铸敏'</tag></item>
+		<item>秦攀博<tag>V='秦攀博'</tag></item>
+		
+		<item>袁惠恩<tag>V='袁惠恩'</tag></item>
+		<item>谢伟文<tag>V='谢伟文'</tag></item>
+		<item>暨永杰<tag>V='暨永杰'</tag></item>
+		
+		<item>陈晓平<tag>V='陈晓平'</tag></item>
+		<item>黄凯旋<tag>V='黄凯旋'</tag></item>
+		<item>张瑞<tag>V='张瑞'</tag></item>
+		<item>曾佩菲<tag>V='曾佩菲'</tag></item>
+		<item>崔凤国<tag>V='崔凤国'</tag></item>
+		<item>陈迁达<tag>V='陈迁达'</tag></item>
+		
+		<item>林泽建<tag>V='林泽建'</tag></item>
+		<item>黄世杰<tag>V='黄世杰'</tag></item>
+		<item>陈国波<tag>V='陈国波'</tag></item>
+		
+		<item>谭燕萍<tag>V='谭燕萍'</tag></item>
+		<item>黄燕和<tag>V='黄燕和'</tag></item>
+		<item>蔡乔庄<tag>V='蔡乔庄'</tag></item>
+		<item>周红<tag>V='周红'</tag></item>
+		<item>刘中华<tag>V='刘中华'</tag></item>
+		<item>李冬梅<tag>V='李冬梅'</tag></item>
+		<item>严蕴君<tag>V='严蕴君'</tag></item>
+		
+		<item>廖秋伟<tag>V='廖秋伟'</tag></item>
+		<item>何家通<tag>V='何家通'</tag></item>
+		
+		<item>罗继伙<tag>V='罗继伙'</tag></item>
+		<item>黄展明<tag>V='黄展明'</tag></item>
+		<item>曾庆恒<tag>V='曾庆恒'</tag></item>
+		<item>颜忆珍<tag>V='颜忆珍'</tag></item>
+		<item>戴伟宇<tag>V='戴伟宇'</tag></item>
+		
+		<item>林伟峰<tag>V='林伟峰'</tag></item>
+		<item>林超培<tag>V='林超培'</tag></item>
+		<item>李学应<tag>V='李学应'</tag></item>
+		<item>黄就阳<tag>V='黄就阳'</tag></item>
+		<item>黄志华<tag>V='黄志华'</tag></item>
+		
+		<item>林晖<tag>V='林晖'</tag></item>
+		<item>冼秋贵<tag>V='冼秋贵'</tag></item>
+		<item>徐胜家<tag>V='徐胜家'</tag></item>
+		<item>王来法<tag>V='王来法'</tag></item>
+		<item>徐锦雄<tag>V='徐锦雄'</tag></item>
+		<item>高东明<tag>V='高东明'</tag></item>
+		<item>王佩琼<tag>V='王佩琼'</tag></item>
+		<item>杜娟<tag>V='杜娟'</tag></item>
+		<item>周慧卿<tag>V='周慧卿'</tag></item>
+		<item>周倩雯<tag>V='周倩雯'</tag></item>
+		<item>梁秀娟<tag>V='梁秀娟'</tag></item>
+		
+		<item>陈穗英<tag>V='陈穗英'</tag></item>
+		<item>王山<tag>V='王山'</tag></item>
+		<item>乔素兰<tag>V='乔素兰'</tag></item>
+		<item>温玲玲<tag>V='温玲玲'</tag></item>
+		<item>陈玉刚<tag>V='陈玉刚'</tag></item>
+		
+		<item>徐伟梁<tag>V='徐伟梁'</tag></item>
+		<item>卫向荣<tag>V='卫向荣'</tag></item>
+		<item>肖丽卿<tag>V='肖丽卿'</tag></item>
+		<item>周一格<tag>V='周一格'</tag></item>
+		<item>朱丽华<tag>V='朱丽华'</tag></item> 
+				
+		<item>李仁武<tag>V='李仁武'</tag></item>
+		<item>霍秀媚<tag>V='霍秀媚'</tag></item>
+		<item>虞程盛<tag>V='虞程盛'</tag></item>
+		<item>邱立志<tag>V='邱立志'</tag></item>
+		<item>闻瑞东<tag>V='闻瑞东'</tag></item>
+		<item>韦朝烈<tag>V='韦朝烈'</tag></item>
+		<item>何传春<tag>V='何传春'</tag></item>
+		<item>段秀芳<tag>V='段秀芳'</tag></item>
+		<item>赵宏宇<tag>V='赵宏宇'</tag></item>
+		
+		<item>陈伟<tag>V='陈伟'</tag></item>
+		<item>敖带芽<tag>V='敖带芽'</tag></item>
+		<item>史浩林<tag>V='史浩林'</tag></item>
+		<item>马蓉蓉<tag>V='马蓉蓉'</tag></item>
+		<item>李萍<tag>V='李萍'</tag></item>
+		<item>叶蔚云<tag>V='叶蔚云'</tag></item>
+		<item>熊威<tag>V='熊威'</tag></item>
+		<item>黎明泽<tag>V='黎明泽'</tag></item>
+		<item>张微<tag>V='张微'</tag></item>
+		
+		<item>王可达<tag>V='王可达'</tag></item>
+		<item>朱殊洋<tag>V='朱殊洋'</tag></item>
+		<item>梅伟霞<tag>V='梅伟霞'</tag></item>
+		<item>章泽武<tag>V='章泽武'</tag></item>
+		<item>周权雄<tag>V='周权雄'</tag></item>
+		<item>李世兰<tag>V='李世兰'</tag></item>
+		<item>王云峰<tag>V='王云峰'</tag></item>
+		
+		<item>黄丽华<tag>V='黄丽华'</tag></item>
+		<item>王敏敏<tag>V='王敏敏'</tag></item>
+		<item>廖雄军<tag>V='廖雄军'</tag></item>
+		<item>申东辉<tag>V='申东辉'</tag></item>
+		<item>吴瑞坚<tag>V='吴瑞坚'</tag></item>
+		<item>姚迈新<tag>V='姚迈新'</tag></item>
+		<item>万玲<tag>V='万玲'</tag></item>
+		<item>王桢桢<tag>V='王桢桢'</tag></item>
+		<item>宋玉蓉<tag>V='宋玉蓉'</tag></item>
+		
+		<item>尹德慈<tag>V='尹德慈'</tag></item>
+		<item>梁宏<tag>V='梁宏'</tag></item>
+		<item>杨晓杰<tag>V='杨晓杰'</tag></item>
+		<item>宋一平<tag>V='宋一平'</tag></item>
+		<item>武三中<tag>V='武三中'</tag></item>
+		<item>王超<tag>V='王超'</tag></item>
+		
+		<item>李三虎<tag>V='李三虎'</tag></item>
+		<item>黄克亮<tag>V='黄克亮'</tag></item>
+		<item>温朝霞<tag>V='温朝霞'</tag></item>
+		<item>杨姝琴<tag>V='杨姝琴'</tag></item>
+		<item>吴家骏<tag>V='吴家骏'</tag></item>
+		<item>黄旭东<tag>V='黄旭东'</tag></item>
+
+		<item>冯仿娅<tag>V='冯仿娅'</tag></item>
+		<item>严跃英<tag>V='严跃英'</tag></item>
+		<item>刘杰<tag>V='刘杰'</tag></item>
+		<item>罗雪明<tag>V='罗雪明'</tag></item>
+		<item>姜晓婷<tag>V='姜晓婷'</tag></item>
+		<item>张锐<tag>V='张锐'</tag></item>
+		<item>田文波<tag>V='田文波'</tag></item>
+		<item>曾敏灵<tag>V='曾敏灵'</tag></item>
+		<item>陈丽冰<tag>V='陈丽冰'</tag></item>
+		<item>李建国<tag>V='李建国'</tag></item>
+		<item>曾秋霞<tag>V='曾秋霞'</tag></item>
+		<item>陈建英<tag>V='陈建英'</tag></item>
+		<item>谭婉薇<tag>V='谭婉薇'</tag></item>
+		<item>李强<tag>V='李强'</tag></item>
+		
+		<item>刘小平<tag>V='刘小平'</tag></item>
+		<item>黄嵩<tag>V='黄嵩'</tag></item>
+		<item>吴秋萍<tag>V='吴秋萍'</tag></item>
+		<item>李韶驰<tag>V='李韶驰'</tag></item>
+		<item>李中民<tag>V='李中民'</tag></item>
+		<item>李志清<tag>V='李志清'</tag></item>
+		<item>郭瑞<tag>V='郭瑞'</tag></item>
+		<item>古玉英<tag>V='古玉英'</tag></item>
+		<item>罗立本<tag>V='罗立本'</tag></item>
+		<item>郑华锋<tag>V='郑华锋'</tag></item>
+		
+		
+
+	</one-of>
+</rule>
+
+
+
+<rule id="Student">
+	<one-of>
+
+<!-- 局级班 -->
+
+<!-- 局级任职班 -->
+<item>邓成明<tag>V='邓成明'</tag></item>
+<item>何士林<tag>V='何士林'</tag></item>
+<item>孙柱<tag>V='孙柱'</tag></item>
+<item>刘利人<tag>V='刘利人'</tag></item>
+<item>刘南群<tag>V='刘南群'</tag></item>
+<item>陈运则<tag>V='陈运则'</tag></item>
+<item>黄德敏<tag>V='黄德敏'</tag></item>
+<item>谭冬元<tag>V='谭冬元'</tag></item>
+<item>胡爱斌<tag>V='胡爱斌'</tag></item>
+<item>刘德挺<tag>V='刘德挺'</tag></item>
+<item>鲍伦军<tag>V='鲍伦军'</tag></item>
+<item>颜强<tag>V='颜强'</tag></item>
+<item>郑航桅<tag>V='郑航桅'</tag></item>
+<item>张叶东<tag>V='张叶东'</tag></item>
+<item>杨国橡<tag>V='杨国橡'</tag></item>
+<item>廖重斌<tag>V='廖重斌'</tag></item>
+<item>陈永亮<tag>V='陈永亮'</tag></item>
+<item>孔祥虎<tag>V='孔祥虎'</tag></item>
+<item>聂林坤<tag>V='聂林坤'</tag></item>
+<item>陈德胜<tag>V='陈德胜'</tag></item>
+<item>罗传亮<tag>V='罗传亮'</tag></item>
+<item>欧阳资文<tag>V='欧阳资文'</tag></item>
+<item>周志坚<tag>V='周志坚'</tag></item>
+<item>庞红瑶<tag>V='庞红瑶'</tag></item>
+<item>欧阳钦顺<tag>V='欧阳钦顺'</tag></item>
+<item>梁国标<tag>V='梁国标'</tag></item>
+<item>桑晓龙<tag>V='桑晓龙'</tag></item>
+<item>余方海<tag>V='余方海'</tag></item>
+<item>李启新<tag>V='李启新'</tag></item>
+<item>闻秋生<tag>V='闻秋生'</tag></item>
+<item>刘杨波<tag>V='刘杨波'</tag></item>
+
+
+
+
+<!-- 处公班 -->
+<item>蓝伟锋<tag>V='蓝伟锋'</tag></item>
+<item>罗定州<tag>V='罗定州'</tag></item>
+<item>王瑞珍<tag>V='王瑞珍'</tag></item>
+<item>王晔<tag>V='王晔'</tag></item>
+<item>钟淑琴<tag>V='钟淑琴'</tag></item>
+<item>张静<tag>V='张静'</tag></item>
+<item>倪渊<tag>V='倪渊'</tag></item>
+<item>陈继建<tag>V='陈继建'</tag></item>
+<item>苏建<tag>V='苏建'</tag></item>
+<item>罗政<tag>V='罗政'</tag></item>
+<item>陈伟<tag>V='陈伟'</tag></item>
+<item>王键<tag>V='王键'</tag></item>
+<item>秦少玲<tag>V='秦少玲'</tag></item>
+<item>陈雷<tag>V='陈雷'</tag></item>
+<item>郑育芳<tag>V='郑育芳'</tag></item>
+<item>张云琼<tag>V='张云琼'</tag></item>
+<item>黄津<tag>V='黄津'</tag></item>
+<item>李沁<tag>V='李沁'</tag></item>
+<item>郑仁鹏<tag>V='郑仁鹏'</tag></item>
+<item>曾幼文<tag>V='曾幼文'</tag></item>
+<item>罗宗国<tag>V='罗宗国'</tag></item>
+<item>罗石城<tag>V='罗石城'</tag></item>
+<item>满新林<tag>V='满新林'</tag></item>
+<item>肖洲坚<tag>V='肖洲坚'</tag></item>
+<item>郭雯<tag>V='郭雯'</tag></item>
+<item>陈光辉<tag>V='陈光辉'</tag></item>
+<item>申冬梅<tag>V='申冬梅'</tag></item>
+<item>严穗娟<tag>V='严穗娟'</tag></item>
+<item>陈碧莲<tag>V='陈碧莲'</tag></item>
+<item>梁雪梅<tag>V='梁雪梅'</tag></item>
+<item>谭育宁<tag>V='谭育宁'</tag></item>
+<item>刘雪飞<tag>V='刘雪飞'</tag></item>
+<item>肖宇东<tag>V='肖宇东'</tag></item>
+<item>朱少凡<tag>V='朱少凡'</tag></item>
+<item>赵远义<tag>V='赵远义'</tag></item>
+<item>张咏祥<tag>V='张咏祥'</tag></item>
+<item>邓卫玲<tag>V='邓卫玲'</tag></item>
+<item>吴建成<tag>V='吴建成'</tag></item>
+<item>陈荣<tag>V='陈荣'</tag></item>
+<item>曾奇明<tag>V='曾奇明'</tag></item>
+<item>郑艳明<tag>V='郑艳明'</tag></item>
+<item>宋娴<tag>V='宋娴'</tag></item>
+<item>蒋欣<tag>V='蒋欣'</tag></item>
+<item>胡启斌<tag>V='胡启斌'</tag></item>
+<item>宋忠林<tag>V='宋忠林'</tag></item>
+<item>林伟兴<tag>V='林伟兴'</tag></item>
+<item>陈熙<tag>V='陈熙'</tag></item>
+<item>刘兴京<tag>V='刘兴京'</tag></item>
+<item>冯伟雄<tag>V='冯伟雄'</tag></item>
+
+
+
+
+
+<!-- 处三班 -->
+
+
+
+<!-- 处二班 -->
+<item>刘刚<tag>V='刘刚'</tag></item>
+<item>温蔚<tag>V='温蔚'</tag></item>
+<item>李嘉斌<tag>V='李嘉斌'</tag></item>
+<item>明良灿<tag>V='明良灿'</tag></item>
+<item>岳玉生<tag>V='岳玉生'</tag></item>
+<item>徐伯友<tag>V='徐伯友'</tag></item>
+<item>杜淑健<tag>V='杜淑健'</tag></item>
+<item>何清<tag>V='何清'</tag></item>
+<item>肖伟<tag>V='肖伟'</tag></item>
+<item>张志东<tag>V='张志东'</tag></item>
+<item>蔡兴勇<tag>V='蔡兴勇'</tag></item>
+<item>王耿文<tag>V='王耿文'</tag></item>
+<item>张任钦<tag>V='张任钦'</tag></item>
+<item>殷国强<tag>V='殷国强'</tag></item>
+<item>张扬<tag>V='张扬'</tag></item>
+<item>甘旭<tag>V='甘旭'</tag></item>
+<item>姚健建<tag>V='姚健建'</tag></item>
+<item>郑钧<tag>V='郑钧'</tag></item>
+<item>文军<tag>V='文军'</tag></item>
+<item>曾全钢<tag>V='曾全钢'</tag></item>
+<item>贾永洪<tag>V='贾永洪'</tag></item>
+<item>尹毅<tag>V='尹毅'</tag></item>
+<item>黄启荣<tag>V='黄启荣'</tag></item>
+<item>张学东<tag>V='张学东'</tag></item>
+<item>李德恭<tag>V='李德恭'</tag></item>
+<item>李少玲<tag>V='李少玲'</tag></item>
+<item>江文杰<tag>V='江文杰'</tag></item>
+<item>刘春萌<tag>V='刘春萌'</tag></item>
+<item>陈智烽<tag>V='陈智烽'</tag></item>
+<item>包琪龙<tag>V='包琪龙'</tag></item>
+<item>杨国跃<tag>V='杨国跃'</tag></item>
+
+
+
+
+
+<!-- 处一班 -->
+<item>廖平<tag>V='廖平'</tag></item>
+<item>沈广平<tag>V='沈广平'</tag></item>
+<item>冯润胜<tag>V='冯润胜'</tag></item>
+<item>叶新平<tag>V='叶新平'</tag></item>
+<item>樊质彬<tag>V='樊质彬'</tag></item>
+<item>张晓平<tag>V='张晓平'</tag></item>
+<item>杨西豹<tag>V='杨西豹'</tag></item>
+<item>彭辉<tag>V='彭辉'</tag></item>
+<item>张文虹<tag>V='张文虹'</tag></item>
+<item>莫尚凯<tag>V='莫尚凯'</tag></item>
+<item>潘盛世<tag>V='潘盛世'</tag></item>
+<item>何云朝<tag>V='何云朝'</tag></item>
+<item>李伟新<tag>V='李伟新'</tag></item>
+<item>邓集雄<tag>V='邓集雄'</tag></item>
+<item>桑学良<tag>V='桑学良'</tag></item>
+<item>宋彦敏<tag>V='宋彦敏'</tag></item>
+<item>陈璋<tag>V='陈璋'</tag></item>
+<item>陈卓敏<tag>V='陈卓敏'</tag></item>
+<item>杨宏伟<tag>V='杨宏伟'</tag></item>
+<item>王俊杰<tag>V='王俊杰'</tag></item>
+<item>李保和<tag>V='李保和'</tag></item>
+<item>詹进锋<tag>V='詹进锋'</tag></item>
+<item>林婷<tag>V='林婷'</tag></item>
+<item>陈予欢<tag>V='陈予欢'</tag></item>
+<item>卢炎安<tag>V='卢炎安'</tag></item>
+<item>何东升<tag>V='何东升'</tag></item>
+<item>詹益山<tag>V='詹益山'</tag></item>
+<item>周文惠<tag>V='周文惠'</tag></item>
+<item>王江枫<tag>V='王江枫'</tag></item>
+<item>叶建卫<tag>V='叶建卫'</tag></item>
+<item>何国秋<tag>V='何国秋'</tag></item>
+
+
+
+<!-- 正处任职班 -->
+<item>鲍炜<tag>V='鲍炜'</tag></item>
+<item>甘天文<tag>V='甘天文'</tag></item>
+<item>黄斌<tag>V='黄斌'</tag></item>
+<item>孙东彦<tag>V='孙东彦'</tag></item>
+<item>刘锋<tag>V='刘锋'</tag></item>
+<item>刘献斌<tag>V='刘献斌'</tag></item>
+<item>王广兵<tag>V='王广兵'</tag></item>
+<item>王恒芳<tag>V='王恒芳'</tag></item>
+<item>阳晓儒<tag>V='阳晓儒'</tag></item>
+<item>刘杰<tag>V='刘杰'</tag></item>
+<item>赵立宇<tag>V='赵立宇'</tag></item>
+<item>周少卿<tag>V='周少卿'</tag></item>
+<item>陈震<tag>V='陈震'</tag></item>
+<item>郑重民<tag>V='郑重民'</tag></item>
+<item>刘旭<tag>V='刘旭'</tag></item>
+<item>李彬<tag>V='李彬'</tag></item>
+<item>古靖文<tag>V='古靖文'</tag></item>
+<item>李长清<tag>V='李长清'</tag></item>
+<item>欧阳可员<tag>V='欧阳可员'</tag></item>
+<item>张汉华<tag>V='张汉华'</tag></item>
+<item>林燕英<tag>V='林燕英'</tag></item>
+<item>黎钟坤<tag>V='黎钟坤'</tag></item>
+<item>熊国平<tag>V='熊国平'</tag></item>
+<item>彭诗升<tag>V='彭诗升'</tag></item>
+<item>陈志斌<tag>V='陈志斌'</tag></item>
+<item>方雪容<tag>V='方雪容'</tag></item>
+<item>李方遒<tag>V='李方遒'</tag></item>
+<item>张瑞洲<tag>V='张瑞洲'</tag></item>
+<item>雷世元<tag>V='雷世元'</tag></item>
+<item>李岳华<tag>V='李岳华'</tag></item>
+<item>陈刚<tag>V='陈刚'</tag></item>
+<item>张海蓉<tag>V='张海蓉'</tag></item>
+<item>陈伟英<tag>V='陈伟英'</tag></item>
+<item>凌宏城<tag>V='凌宏城'</tag></item>
+<item>魏树新<tag>V='魏树新'</tag></item>
+<item>陈国平<tag>V='陈国平'</tag></item>
+<item>李若岚<tag>V='李若岚'</tag></item>
+<item>吕嘉春<tag>V='吕嘉春'</tag></item>
+<item>张锋<tag>V='张锋'</tag></item>
+<item>巴尚清<tag>V='巴尚清'</tag></item>
+<item>吴福全<tag>V='吴福全'</tag></item>
+<item>张衍<tag>V='张衍'</tag></item>
+
+
+
+<!-- 中青班 -->
+
+
+
+
+<!-- 青干班 -->
+<item>李征<tag>V='李征'</tag></item>
+<item>罗永锋<tag>V='罗永锋'</tag></item>
+<item>杨志华<tag>V='杨志华'</tag></item>
+<item>苏健<tag>V='苏健'</tag></item>
+<item>林俊娜<tag>V='林俊娜'</tag></item>
+<item>何蔼贤<tag>V='何蔼贤'</tag></item>
+<item>叶韧<tag>V='叶韧'</tag></item>
+<item>龙华连<tag>V='龙华连'</tag></item>
+<item>黄晓武<tag>V='黄晓武'</tag></item>
+<item>李富潮<tag>V='李富潮'</tag></item>
+<item>刘建炜<tag>V='刘建炜'</tag></item>
+<item>申智平<tag>V='申智平'</tag></item>
+<item>张海燕<tag>V='张海燕'</tag></item>
+<item>吴琨<tag>V='吴琨'</tag></item>
+<item>刘晓亮<tag>V='刘晓亮'</tag></item>
+<item>利颖瑜<tag>V='利颖瑜'</tag></item>
+<item>唐艳华<tag>V='唐艳华'</tag></item>
+<item>吕孝东<tag>V='吕孝东'</tag></item>
+<item>鲁才浩<tag>V='鲁才浩'</tag></item>
+<item>雷北平<tag>V='雷北平'</tag></item>
+<item>张奉哲<tag>V='张奉哲'</tag></item>
+<item>甘润宇<tag>V='甘润宇'</tag></item>
+<item>陈昊旸<tag>V='陈昊旸'</tag></item>
+<item>李永红<tag>V='李永红'</tag></item>
+<item>袁渭锟<tag>V='袁渭锟'</tag></item>
+<item>熊辉亚<tag>V='熊辉亚'</tag></item>
+<item>方声洪<tag>V='方声洪'</tag></item>
+<item>赵超文<tag>V='赵超文'</tag></item>
+<item>邬丽娟<tag>V='邬丽娟'</tag></item>
+<item>邹媛媛<tag>V='邹媛媛'</tag></item>
+<item>朱宝莉<tag>V='朱宝莉'</tag></item>
+<item>林占恺<tag>V='林占恺'</tag></item>
+<item>何锐明<tag>V='何锐明'</tag></item>
+<item>李昀燕<tag>V='李昀燕'</tag></item>
+<item>田文波<tag>V='田文波'</tag></item>
+<item>全京霞<tag>V='全京霞'</tag></item>
+<item>窦丽方<tag>V='窦丽方'</tag></item>
+<item>孟祥享<tag>V='孟祥享'</tag></item>
+<item>殷宁宁<tag>V='殷宁宁'</tag></item>
+<item>杨超<tag>V='杨超'</tag></item>
+<item>李焜泰<tag>V='李焜泰'</tag></item>
+<item>高振武<tag>V='高振武'</tag></item>
+<item>李奕华<tag>V='李奕华'</tag></item>
+<item>肖明<tag>V='肖明'</tag></item>
+
+
+
+	</one-of>
+</rule>
+
+
+
+</grammar>	
+

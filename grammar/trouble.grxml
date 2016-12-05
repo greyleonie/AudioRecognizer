@@ -1,0 +1,1345 @@
+<?xml version='1.0' encoding='GB'?>
+<grammar xml:lang="zh-cn" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="TroubleReport">
+
+	<meta name="incompletetimeout" content="2000"/>
+
+
+<rule id="TroubleReport">
+
+	<item repeat="1-"> 
+		<ruleref uri="#Trouble"/> 
+	</item> 
+
+</rule>
+
+
+<rule id="Trouble">
+	<one-of>
+<!--	
+		<item>勤学楼六零幺</item>
+	  <item>勤学楼六零一</item>
+	  <item>勤学楼六零二</item>
+	  <item>勤学楼六零三</item>
+	  <item>勤学楼六零四</item>
+	  <item>勤学楼六零五</item>
+	  <item>勤学楼六零六</item>
+	  <item>勤学楼六零七</item>
+	  <item>勤学楼六零八</item>
+	  <item>勤学楼六零九</item>
+	  <item>勤学楼六幺零</item>
+	  <item>勤学楼六一零</item>
+	  <item>勤学楼六幺幺</item>
+	  <item>勤学楼六一一</item>
+	  <item>勤学楼六幺二</item>
+	  <item>勤学楼六一二</item>
+	  <item>勤学楼六幺三</item>
+	  <item>勤学楼六一三</item>
+	  <item>勤学楼六幺四</item>
+	  <item>勤学楼六一四</item>
+	  <item>勤学楼六幺五</item>
+	  <item>勤学楼六一五</item>
+	  <item>勤学楼七零幺</item>
+	  <item>勤学楼七零一</item>
+	  <item>勤学楼七零二</item>
+	  <item>勤学楼七零三</item>
+	  <item>勤学楼七零四</item>
+	  <item>勤学楼七零五</item>
+	  <item>勤学楼七零六</item>
+	  <item>勤学楼七零七</item>
+	  <item>勤学楼七零八</item>
+	  <item>勤学楼七零九</item>
+	  <item>勤学楼七幺零</item>
+	  <item>勤学楼七一零</item>
+	  <item>勤学楼七幺幺</item>
+	  <item>勤学楼七一一</item>
+	  <item>勤学楼七幺二</item>
+	  <item>勤学楼七一二</item>
+	  <item>勤学楼七幺三</item>
+	  <item>勤学楼七一三</item>
+	  <item>勤学楼七幺四</item>
+	  <item>勤学楼七一四</item>
+	  <item>勤学楼七幺五</item>
+	  <item>勤学楼七一五</item>
+	  <item>勤学楼八零幺</item>
+	  <item>勤学楼八零一</item>
+	  <item>勤学楼八零二</item>
+	  <item>勤学楼八零三</item>
+	  <item>勤学楼八零四</item>
+	  <item>勤学楼八零五</item>
+	  <item>勤学楼八零六</item>
+	  <item>勤学楼八零七</item>
+	  <item>勤学楼八零八</item>
+	  <item>勤学楼八零九</item>
+	  <item>勤学楼八幺零</item>
+	  <item>勤学楼八一零</item>
+	  <item>勤学楼八幺幺</item>
+	  <item>勤学楼八一一</item>
+	  <item>勤学楼八幺二</item>
+	  <item>勤学楼八一二</item>
+	  <item>勤学楼八幺三</item>
+	  <item>勤学楼八一三</item>
+	  <item>勤学楼八幺四</item>
+	  <item>勤学楼八一四</item>
+	  <item>勤学楼八幺五</item>
+	  <item>勤学楼八一五</item>
+	  <item>勤学楼九零幺</item>
+	  <item>勤学楼九零一</item>
+	  <item>勤学楼九零二</item>
+	  <item>勤学楼九零三</item>
+	  <item>勤学楼九零四</item>
+	  <item>勤学楼九零五</item>
+	  <item>勤学楼九零六</item>
+	  <item>勤学楼九零七</item>
+	  <item>勤学楼九零八</item>
+	  <item>勤学楼九零九</item>
+	  <item>勤学楼九幺零</item>
+	  <item>勤学楼九一零</item>
+	  <item>勤学楼九幺幺</item>
+	  <item>勤学楼九一一</item>
+	  <item>勤学楼九幺二</item>
+	  <item>勤学楼九一二</item>
+	  <item>勤学楼九幺三</item>
+	  <item>勤学楼九一三</item>
+	  <item>勤学楼九幺四</item>
+	  <item>勤学楼九一四</item>
+	  <item>勤学楼九幺五</item>
+	  <item>勤学楼九一五</item>
+	  <item>勤学楼幺零零幺</item>
+	  <item>勤学楼一零零一</item>
+	  <item>勤学楼幺零零二</item>
+	  <item>勤学楼一零零二</item>
+	  <item>勤学楼幺零零三</item>
+	  <item>勤学楼一零零三</item>
+	  <item>勤学楼幺零零四</item>
+		<item>勤学楼一零零四</item>
+		<item>勤学楼幺零零五</item>
+	  <item>勤学楼一零零五</item>
+	  <item>勤学楼幺零零六</item>
+	  <item>勤学楼一零零六</item>
+	  <item>勤学楼幺零零七</item>
+	  <item>勤学楼一零零七</item>
+	  <item>勤学楼幺零零八</item>
+	  <item>勤学楼一零零八</item>
+	  <item>勤学楼幺零零九</item>
+	  <item>勤学楼一零零九</item>
+	  <item>勤学楼幺零幺零</item>
+		<item>勤学楼一零一零</item>
+		<item>勤学楼幺零幺幺</item>
+	  <item>勤学楼一零一一</item>
+	  <item>勤学楼幺零幺二</item>
+	  <item>勤学楼一零一二</item>
+	  <item>勤学楼幺零幺三</item>
+	  <item>勤学楼一零一三</item>
+	  <item>勤学楼幺零幺四</item>
+	  <item>勤学楼一零一四</item>
+	  <item>勤学楼幺零幺五</item>
+	  <item>勤学楼一零一五</item>
+	  <item>勤学楼幺幺零幺</item>
+	  <item>勤学楼一一零一</item>
+	  <item>勤学楼幺幺零二</item>
+	  <item>勤学楼一一零二</item>
+	  <item>勤学楼幺幺零三</item>
+	  <item>勤学楼一一零三</item>
+	  <item>勤学楼幺幺零四</item>
+		<item>勤学楼一一零四</item>
+		<item>勤学楼幺幺零五</item>
+	  <item>勤学楼一一零五</item>
+	  <item>勤学楼幺幺零六</item>
+	  <item>勤学楼一一零六</item>
+	  <item>勤学楼幺幺零七</item>
+	  <item>勤学楼一一零七</item>
+	  <item>勤学楼幺幺零八</item>
+	  <item>勤学楼一一零八</item>
+	  <item>勤学楼幺幺零九</item>
+	  <item>勤学楼一一零九</item>
+	  <item>勤学楼幺幺幺零</item>
+		<item>勤学楼一一一零</item>
+		<item>勤学楼幺幺幺幺</item>
+	  <item>勤学楼一一一一</item>
+	  <item>勤学楼幺幺幺二</item>
+	  <item>勤学楼一一一二</item>
+	  <item>勤学楼幺幺幺三</item>
+	  <item>勤学楼一一一三</item>
+	  <item>勤学楼幺幺幺四</item>
+	  <item>勤学楼一一一四</item>
+	  <item>勤学楼幺幺幺五</item>
+	  <item>勤学楼一一一五</item>
+	  <item>勤学楼幺二零幺</item>
+	  <item>勤学楼一二零一</item>
+	  <item>勤学楼幺二零二</item>
+	  <item>勤学楼一二零二</item>
+	  <item>勤学楼幺二零三</item>
+	  <item>勤学楼一二零三</item>
+	  <item>勤学楼幺二零四</item>
+		<item>勤学楼一二零四</item>
+		<item>勤学楼幺二零五</item>
+	  <item>勤学楼一二零五</item>
+	  <item>勤学楼幺二零六</item>
+	  <item>勤学楼一二零六</item>
+	  <item>勤学楼幺二零七</item>
+	  <item>勤学楼一二零七</item>
+	  <item>勤学楼幺二零八</item>
+	  <item>勤学楼一二零八</item>
+	  <item>勤学楼幺二零九</item>
+	  <item>勤学楼一二零九</item>
+	  <item>勤学楼幺二幺零</item>
+		<item>勤学楼一二一零</item>
+		<item>勤学楼幺二幺幺</item>
+	  <item>勤学楼一二一一</item>
+	  <item>勤学楼幺二幺二</item>
+	  <item>勤学楼一二一二</item>
+	  <item>勤学楼幺二幺三</item>
+	  <item>勤学楼一二一三</item>
+	  <item>勤学楼幺二幺四</item>
+	  <item>勤学楼一二一四</item>
+	  <item>勤学楼幺二幺五</item>
+	  <item>勤学楼一二一五</item>
+	  <item>勤学楼幺三零幺</item>
+	  <item>勤学楼一三零一</item>
+	  <item>勤学楼幺三零二</item>
+	  <item>勤学楼一三零二</item>
+	  <item>勤学楼幺三零三</item>
+	  <item>勤学楼一三零三</item>
+	  <item>勤学楼幺三零四</item>
+		<item>勤学楼一三零四</item>
+		<item>勤学楼幺三零五</item>
+	  <item>勤学楼一三零五</item>
+	  <item>勤学楼幺三零六</item>
+	  <item>勤学楼一三零六</item>
+	  <item>勤学楼幺三零七</item>
+	  <item>勤学楼一三零七</item>
+	  <item>勤学楼幺三零八</item>
+	  <item>勤学楼一三零八</item>
+	  <item>勤学楼幺三零九</item>
+	  <item>勤学楼一三零九</item>
+	  <item>勤学楼幺三幺零</item>
+		<item>勤学楼一三一零</item>
+		<item>勤学楼幺三幺幺</item>
+	  <item>勤学楼一三一一</item>
+	  <item>勤学楼幺三幺二</item>
+	  <item>勤学楼一三一二</item>
+	  <item>勤学楼幺三幺三</item>
+	  <item>勤学楼一三一三</item>
+	  <item>勤学楼幺三幺四</item>
+	  <item>勤学楼一三一四</item>
+	  <item>勤学楼幺三幺五</item>
+	  <item>勤学楼一三一五</item>
+	  <item>勤学楼幺四零幺</item>
+	  <item>勤学楼一四零一</item>
+	  <item>勤学楼幺四零二</item>
+	  <item>勤学楼一四零二</item>
+	  <item>勤学楼幺四零三</item>
+	  <item>勤学楼一四零三</item>
+	  <item>勤学楼幺四零四</item>
+		<item>勤学楼一四零四</item>
+		<item>勤学楼幺四零五</item>
+	  <item>勤学楼一四零五</item>
+	  <item>勤学楼幺四零六</item>
+	  <item>勤学楼一四零六</item>
+	  <item>勤学楼幺四零七</item>
+	  <item>勤学楼一四零七</item>
+	  <item>勤学楼幺四零八</item>
+	  <item>勤学楼一四零八</item>
+	  <item>勤学楼幺四零九</item>
+	 	<item>勤学楼一四零九</item>
+	 	<item>勤学楼幺四幺零</item>
+		<item>勤学楼一四一零</item>
+		<item>勤学楼幺四幺幺</item>
+	  <item>勤学楼一四一一</item>
+	  <item>勤学楼幺四幺二</item>
+	  <item>勤学楼一四一二</item>
+	  <item>勤学楼幺四幺三</item>
+	  <item>勤学楼一四一三</item>
+	  <item>勤学楼幺四幺四</item>
+	  <item>勤学楼一四一四</item>
+	  <item>勤学楼幺四幺五</item>
+	  <item>勤学楼一四一五</item>
+	  <item>勤学楼幺五零幺</item>
+	  <item>勤学楼一五零一</item>
+	  <item>勤学楼幺五零二</item>
+	  <item>勤学楼一五零二</item>
+	  <item>勤学楼幺五零三</item>
+	  <item>勤学楼一五零三</item>
+	  <item>勤学楼幺五零四</item>
+		<item>勤学楼一五零四</item>
+		<item>勤学楼幺五零五</item>
+	  <item>勤学楼一五零五</item>
+	  <item>勤学楼幺五零六</item>
+	  <item>勤学楼一五零六</item>
+	  <item>勤学楼幺五零七</item>
+	  <item>勤学楼一五零七</item>
+	  <item>勤学楼幺五零八</item>
+	  <item>勤学楼一五零八</item>
+	  <item>勤学楼幺五零九</item>
+	  <item>勤学楼一五零九</item>
+	  <item>勤学楼幺五幺零</item>
+		<item>勤学楼一五一零</item>
+		<item>勤学楼幺五幺幺</item>
+	  <item>勤学楼一五一一</item>
+	  <item>勤学楼幺五幺二</item>
+	  <item>勤学楼一五一二</item>
+	  <item>勤学楼幺五幺三</item>
+	  <item>勤学楼一五一三</item>
+	  <item>勤学楼幺五幺四</item>
+	  <item>勤学楼一五一四</item>
+	  <item>勤学楼幺五幺五</item>
+	  <item>勤学楼一五一五</item>
+	  
+	  <item>二十六栋二零二</item>
+	  <item>二十六栋二零三</item>
+	  <item>二十六栋二零四</item>
+	  <item>二十六栋二零五</item>
+	  <item>二十六栋二零六</item>
+	  <item>二十六栋二零七</item>
+	  <item>二十六栋二零八</item>
+	  <item>二十六栋二零九</item>
+	  <item>二十六栋三零二</item>
+	  <item>二十六栋三零三</item>
+	  <item>二十六栋三零四</item>
+	  <item>二十六栋三零五</item>
+	  <item>二十六栋三零六</item>
+	  <item>二十六栋三零七</item>
+	  <item>二十六栋三零八</item>
+	  <item>二十六栋三零九</item>
+	  <item>二十六栋四零二</item>
+	  <item>二十六栋四零三</item>
+	  <item>二十六栋四零四</item>
+	  <item>二十六栋四零五</item>
+	  <item>二十六栋四零六</item>
+	  <item>二十六栋四零七</item>
+	  <item>二十六栋四零八</item>
+	  <item>二十六栋四零九</item>
+	  <item>二十六栋五零二</item>
+	  <item>二十六栋五零三</item>
+	  <item>二十六栋五零四</item>
+	  <item>二十六栋五零五</item>
+	  <item>二十六栋五零六</item>
+	  <item>二十六栋五零七</item>
+	  <item>二十六栋五零八</item>
+	  <item>二十六栋五零九</item>
+	  <item>二十六栋六零二</item>
+	  <item>二十六栋六零三</item>
+	  <item>二十六栋六零四</item>
+	  <item>二十六栋六零五</item>
+	  <item>二十六栋六零六</item>
+	  <item>二十六栋六零七</item>
+	  <item>二十六栋六零八</item>
+	  <item>二十六栋六零九</item>
+	  
+	  <item>二十七栋二零二</item>
+	  <item>二十七栋二零三</item>
+	  <item>二十七栋二零四</item>
+	  <item>二十七栋二零五</item>
+	  <item>二十七栋二零六</item>
+	  <item>二十七栋二零七</item>
+	  <item>二十七栋二零八</item>
+	  <item>二十七栋二零九</item>
+	  <item>二十七栋二幺零</item>
+	  <item>二十七栋二一零</item>
+	  <item>二十七栋三零二</item>
+	  <item>二十七栋三零三</item>
+	  <item>二十七栋三零四</item>
+	  <item>二十七栋三零五</item>
+	  <item>二十七栋三零六</item>
+	  <item>二十七栋三零七</item>
+	  <item>二十七栋三零八</item>
+	  <item>二十七栋三零九</item>
+	  <item>二十七栋三幺零</item>
+	  <item>二十七栋三一零</item>
+	  <item>二十七栋四零二</item>
+	  <item>二十七栋四零三</item>
+	  <item>二十七栋四零四</item>
+	  <item>二十七栋四零五</item>
+	  <item>二十七栋四零六</item>
+	  <item>二十七栋四零七</item>
+	  <item>二十七栋四零八</item>
+	  <item>二十七栋四零九</item>
+	  <item>二十七栋四幺零</item>
+	  <item>二十七栋四一零</item>
+	  <item>二十七栋五零二</item>
+	  <item>二十七栋五零三</item>
+	  <item>二十七栋五零四</item>
+	  <item>二十七栋五零五</item>
+	  <item>二十七栋五零六</item>
+	  <item>二十七栋五零七</item>
+	  <item>二十七栋五零八</item>
+	  <item>二十七栋五零九</item>
+	  <item>二十七栋五幺零</item>
+	  <item>二十七栋五一零</item>
+	  <item>二十七栋六零二</item>
+	  <item>二十七栋六零三</item>
+	  <item>二十七栋六零四</item>
+	  <item>二十七栋六零五</item>
+	  <item>二十七栋六零六</item>
+	  <item>二十七栋六零七</item>
+	  <item>二十七栋六零八</item>
+	  <item>二十七栋六零九</item>
+	  <item>二十七栋六幺零</item>
+	  <item>二十七栋六一零</item>
+	  <item>二十七栋七零二</item>
+	  <item>二十七栋七零三</item>
+	  <item>二十七栋七零四</item>
+	  <item>二十七栋七零五</item>
+	  <item>二十七栋七零六</item>
+	  <item>二十七栋七零七</item>
+	  <item>二十七栋七零八</item>
+	  <item>二十七栋七零九</item>
+	  <item>二十七栋七幺零</item>
+	  <item>二十七栋七一零</item>
+	  
+	  <item>二十二栋</item>
+	  <item>教研楼</item>
+	  
+	  <item>二十一栋</item>
+	  <item>行政楼</item>
+	  <item>行政处</item>
+	  
+	  <item>办公楼</item>
+	  <item>二十栋</item>
+	  
+	  <item>办公室</item>
+	  
+	  <item>二十三栋</item>
+	  <item>二十三栋礼堂</item>
+	  <item>礼堂</item>
+		<item>阶梯教室</item>
+		
+		<item>学员宿舍</item>
+		
+		<item>游泳池</item>
+		
+		<item>三十三栋</item>
+		
+		<item>怡乐园</item>
+		
+		<item>羽毛球馆</item>
+	  <item>球馆</item>
+	  
+	  <item>康乐园</item>
+		<item>康乐园办公室</item>
+		
+		<item>校长办公室</item>
+	  <item>校长室</item>
+	  
+	  <item>机要室</item>
+	  
+	  <item>车队</item>
+	  
+	  <item>文印室</item>
+	  <item>文印</item>
+	  
+	  <item>组织处</item>
+  	<item>人事处</item>
+  	<item>组织人事处</item>
+  	
+  	<item>机关党委</item>
+	  <item>党委</item>
+	  
+	  <item>教务处</item>
+	  
+	  <item>科研处</item>
+	  
+	  <item>行政处</item>
+	  
+	  <item>保卫科</item>
+	  
+	  <item>管理科</item>
+		<item>管理服务科</item>
+		
+		
+		
+-->	  
+	  
+	  
+		
+		<item>电脑上不了网</item>
+		<item>电脑不能上网</item>
+		<item>电脑打不开</item>
+		<item>门打不开</item>
+		<item>门开不了</item>
+		<item>开不了门</item>
+		<item>上不了校园网</item>
+		<item>电脑显示屏故障</item>
+		<item>抽水马桶漏水</item>
+		<item>厕所马桶漏水</item>
+		<item>请马上过来换床单被褥</item>
+		<item>请换枕巾床单被褥</item>
+		<item>可能中毒了</item>
+		<item>没有小卖部的刷卡和长租的刷卡</item>
+		<item>电脑没办法跟教师进行评分</item>
+		<item>电脑开机后屏幕出现振动</item>
+		<item>可能是电源开关保险有问题</item>
+		<item>电脑登录用户名不存在</item>
+		<item>洗手间的灯泡烧了</item>
+		<item>电脑需要重装</item>
+		<item>更换桶装水</item>
+		<item>没纸了</item>
+		<item>灯坏了</item>
+		<item>电脑故障</item>
+		<item>电脑有问题</item>
+		<item>电脑网线有问题</item>
+		<item>电脑网线故障</item>
+		<item>电脑找不到服务器</item>
+		<item>电脑没有声音</item>
+		<item>电脑上网故障</item>
+		<item>电源中断</item>
+		<item>网页打不开</item>
+		<item>没有拖鞋</item>
+		<item>没有牙膏</item>
+		<item>没有毛巾</item>
+		<item>洗脸盆漏水</item>
+		<item>电源开关故障</item>
+		<item>电源开关松动</item>
+		<item>热水器故障</item>
+		<item>没有热水</item>
+		<item>热水器打不着火</item>
+		<item>门关不上</item>
+		<item>门锁不上</item>
+		<item>电脑突然关机</item>
+		<item>上不了外网</item>
+		<item>上不了互联网</item>
+		<item>上不了内网</item>
+		<item>门锁坏了</item>
+		<item>房门锁坏</item>
+		<item>锁不上门</item>
+		<item>找不到服务器</item>
+		<item>电脑登录不成功</item>
+		<item>没有纸了</item>
+		<item>内存不足</item>
+		<item>空间不足</item>
+		<item>容量不足</item>
+		<item>暂存空间不足</item>
+		<item>应该输什么</item>
+		<item>怎么输入</item>
+		<item>没有灯泡</item>
+		<item>校园卡不灵</item>
+		<item>校园卡没钱</item>
+		<item>没有电脑</item>
+		<item>请送水</item>
+		<item>请安排送水</item>
+		<item>请派人送水</item>
+		<item>房间的电灯不亮</item>
+		<item>请派人维修</item>
+		<item>电脑密码故障</item>
+		<item>马桶冲不了水</item>
+		<item>水龙头开关失灵</item>
+		<item>没有矿泉水</item>
+		<item>拿一桶矿泉水过来</item>
+		<item>请拿一桶水过来</item>
+		<item>打印机装不上</item>
+		<item>进不了校园网</item>
+		<item>请服务员速来</item>
+		<item>请送一桶矿泉水</item>
+		<item>桶装水用完请补充</item>
+		<item>文件打不开</item>
+		<item>电脑没有反应</item>
+		<item>电视画面不动</item>
+		<item>换一下床上的被单</item>
+		<item>我们这里只有充值</item>
+		<item>内存不够</item>
+		<item>设置了多个用户帐户</item>
+		<item>登录不进去</item>
+		<item>请帮调电脑时间</item>
+		<item>开机后就死机</item>
+		<item>不知道怎样看电视</item>
+		<item>不知道怎样用电脑</item>
+		<item>电视什么都看不到</item>
+		<item>电脑没办法转换成电视</item>
+		<item>电视没办法转换成电脑</item>
+		<item>请送矿泉水过来</item>
+		<item>请送桶装水过来</item>
+		<item>饭堂收费机坏了</item>
+		<item>看不了电影</item>
+		
+		
+		
+		
+		
+		
+		<item>电脑</item>
+		<item>台式电脑</item>
+		<item>主机</item>
+		<item>台式机</item>
+		<item>笔记本</item>
+		<item>笔记本电脑</item>
+		<item>手提电脑</item>
+		<item>计算机</item>
+		
+		<item>显示器</item>
+		<item>液晶屏</item>
+		<item>屏幕</item>
+		<item>显示屏</item>
+		<item>电脑显示屏</item>
+		<item>电脑显示器</item>
+		<item>液晶显示器</item>
+		<item>荧屏</item>
+		<item>画面</item>
+		
+		<item>房间的门</item>
+		<item>房门</item>
+		<item>门</item>
+		<item>门锁</item>
+		<item>锁</item>
+		<item>房间</item>
+		<item>宿舍门</item>
+		<item>房间门</item>
+		<item>厕所门</item>
+		
+		<item>网络</item>
+		<item>外网</item>
+		<item>内网</item>
+		<item>互联网</item>
+		<item>校园网</item>
+		<item>校内网</item>
+		<item>本地连接</item>
+		<item>网络连接</item>
+		<item>网络端口</item>
+		<item>网线</item>
+		<item>电脑网线</item>
+
+		<item>电视</item>
+		<item>电视机</item>
+		<item>有线电视</item>
+		<item>电视节目</item>
+		<item>图像</item>
+		<item>电视图像</item>
+		
+		<item>校园卡</item>
+		<item>校园绿卡</item>
+		<item>一卡通</item>
+		<item>就餐卡</item>
+		<item>饭卡</item>
+		<item>房卡</item>
+		<item>门卡</item>
+		
+		<item>厕所</item>
+		<item>洗手间</item>
+		<item>卫生间</item>
+		
+		<item>马桶</item>
+		<item>抽水马桶</item>
+		<item>冲水的马桶</item>
+		<item>马桶盖</item>
+		<item>厕所马桶盖</item>
+		
+		<item>纸</item>
+		<item>卫生纸</item>
+		<item>卷筒纸</item>
+		<item>手纸</item>
+		<item>纸巾</item>
+		<item>卫生卷纸</item>
+		
+		<item>洗手间的灯泡</item>
+		<item>洗手间的灯</item>
+		<item>房间的电灯</item>
+		<item>日光灯</item>
+		<item>电灯</item>
+		<item>灯管</item>
+		<item>灯泡</item>
+		<item>灯</item>
+		<item>台灯</item>
+		<item>光管</item>
+		
+		<item>机顶盒</item>
+		<item>电视盒</item>
+		<item>遥控器</item>
+		<item>遥控</item>
+		
+		<item>洗手盆</item>
+		<item>洗脸盆</item>
+		<item>洗手池</item>
+		<item>洗脸池</item>
+		<item>洗面池</item>
+		<item>面池</item>
+		<item>脸盆</item>
+		<item>洗手台</item>
+		<item>出水口</item>
+		<item>排污管</item>
+		<item>排污口</item>
+		<item>水龙头开关</item>
+		<item>水龙头</item>
+		<item>排水沟</item>
+		<item>水管</item>
+		
+		<item>淋浴</item>
+		<item>莲蓬头</item>
+		<item>喷头</item>
+		<item>淋浴喷头</item>
+		
+		<item>热水器</item>
+		<item>煤气热水器</item>
+		<item>电热水器</item>
+		
+		<item>党校一体化平台</item>
+		<item>信息一体化平台</item>
+		<item>一体化平台</item>
+		<item>党校身份认证系统</item>
+		<item>身份认证系统</item>
+		
+		
+		<item>教学评估系统</item>
+		<item>教评</item>
+		<item>教评系统</item>
+		<item>评教</item>
+		<item>评学</item>
+		<item>评教系统</item>
+		<item>教学考评系统</item>
+		<item>教学</item>
+		<item>考评</item>
+		
+		<item>图书馆的资料</item>
+		<item>图书馆</item>
+		
+		<item>用户名</item>
+		<item>用户名称</item>
+		<item>登录名</item>
+		<item>登录名称</item>
+		<item>用户帐户</item>
+		<item>网络名</item>
+		<item>主机名</item>
+		<item>学号</item>
+		<item>登录</item>
+		
+		<item>密码</item>
+		<item>口令</item>
+		<item>手机号码</item>
+		
+		<item>被子</item>
+		<item>褥子</item>
+		<item>被褥</item>
+		<item>棉被</item>
+		<item>毯子</item>
+		<item>枕头</item>
+		<item>毛巾</item>
+		<item>床单</item>
+		<item>被单</item>
+		<item>被套</item>
+		<item>枕套</item>
+		<item>枕头套</item>
+		<item>枕巾</item>
+		<item>床</item>
+		<item>拖鞋</item>
+		
+		<item>开水壶</item>
+		<item>烧水壶</item>
+		<item>电热水壶</item>
+		<item>电开水壶</item>
+		<item>热水壶</item>
+		<item>热水瓶</item>
+		<item>桶装水</item>
+		<item>纯净水</item>
+		<item>矿泉水</item>
+		<item>饮用水</item>
+		
+		<item>空调</item>
+		<item>空调机</item>
+		<item>空调器</item>
+		
+		<item>椅子</item>
+		<item>房间的椅子</item>
+		<item>办公椅</item>
+		<item>电脑椅</item>
+		<item>柜子</item>
+		<item>衣柜</item>
+		<item>大衣柜</item>
+		<item>床头柜</item>
+		<item>书桌</item>
+		<item>桌子</item>
+		<item>箱子</item>
+		<item>窗帘</item>
+		<item>帘子</item>
+		<item>抽屉</item>
+		<item>柜门</item>
+		<item>把手</item>
+		<item>门把手</item>
+		
+		<item>电蚊香</item>
+		<item>灭蚊器</item>
+		<item>灭蚊灯</item>
+		
+		<item>插线板</item>
+		<item>接线板</item>
+		<item>拖线板</item>
+		<item>插头</item>
+		<item>电源器</item>
+		<item>电源</item>
+		<item>电源插口</item>
+		<item>电源开关</item>
+		<item>保险</item>
+		<item>保险丝</item>
+		
+		<item>插口</item>
+		<item>网线插口</item>
+		
+		<item>饮水机</item>
+		<item>饮水器</item>
+		
+		<item>冰箱</item>
+		<item>冰柜</item>
+		
+		<item>垃圾桶</item>
+		<item>字纸篓</item>
+		<item>废纸篓</item>
+		<item>乐色桶</item>
+	
+		<item>系统</item>
+		<item>操作系统</item>
+
+		<item>音响</item>
+		<item>音柱</item>
+		<item>音箱</item>
+		<item>喇叭</item>
+		
+		<item>光驱</item>
+		<item>碟机</item>
+		<item>驱动器</item>
+		<item>打印机</item>
+		
+		<item>键盘</item>
+		<item>按键</item>
+		<item>按钮</item>
+		
+		<item>鼠标</item>
+		<item>滑鼠</item>
+
+		<item>声卡</item>
+		<item>音频卡</item>
+		
+		<item>摄像头</item>
+		<item>监控</item>
+		
+		<item>内存</item>
+		<item>内存条</item>
+		
+		<item>硬盘</item>
+		<item>移动硬盘</item>
+		
+		<item>磁盘</item>
+		<item>磁碟</item>
+		<item>软盘</item>
+		
+		<item>光盘</item>
+		<item>光碟</item>
+		
+		<item>电线</item>
+		<item>电缆</item>
+
+		<item>网页</item>
+		<item>页面</item>
+		<item>网站</item>
+		<item>党校网站</item>
+		
+		<item>输入法</item>
+		<item>五笔</item>
+		<item>拼音</item>
+		
+		<item>手写板</item>
+		<item>手写笔</item>
+		<item>手写软件</item>
+		
+		<item>电池</item>
+	
+		<item>杀毒软件</item>
+		<item>防毒软件</item>
+		<item>反病毒软件</item>
+		<item>防病毒软件</item>
+		<item>防火墙</item>
+		
+		<item>音乐</item>
+		<item>歌曲</item>
+		
+		<item>电影</item>
+		<item>视频</item>
+		<item>视频资料</item>
+		<item>影视播放</item>
+		<item>影视</item>
+		<item>影片</item>
+		
+		<item>台</item>
+		<item>频道</item>
+		<item>节目</item>
+		
+		<item>电脑风扇</item>
+		<item>风扇</item>
+		
+		<item>食堂</item>
+		<item>饭堂</item>
+		<item>学员饭堂</item>
+  	<item>饭堂二楼</item>
+  	<item>二楼饭堂</item>
+  	<item>食堂二楼</item>
+  	<item>二楼</item>
+		
+		<item>闸机</item>
+		<item>道闸机</item>
+		<item>入口闸机</item>
+		<item>入口道闸机</item>
+		<item>出口闸机</item>
+		<item>出口道闸机</item>
+		<item>闸机入口</item>
+		<item>道闸机入口</item>
+		<item>闸机出口</item>
+		<item>道闸机出口</item>
+		
+		<item>收费机</item>
+		
+		<item>程序</item>
+		<item>文件</item>
+		
+		<item>开关</item>
+		
+		<item>档案管理</item>
+		
+		<item>信息</item>
+		<item>时间</item>
+		<item>党校</item>
+	
+	
+	
+
+		<item>死机了</item>
+		<item>死机</item>
+		<item>宕机</item>
+		<item>停机</item>
+		<item>开不了机</item>
+		<item>开不了机了</item>
+		<item>不能开机</item>
+		<item>无法开机</item>
+		<item>不能正常开机</item>
+		<item>开机不正常</item>
+		<item>不能启动</item>
+		<item>无法启动</item>
+		<item>启动不了</item>
+		<item>启动不正常</item>
+		<item>开启不了</item>
+		<item>开机</item>
+		
+		<item>打不开</item>
+		<item>打不开了</item>
+		<item>开不了</item>
+		<item>开不着</item>
+		<item>很难开</item>
+		<item>不开启</item>
+		<item>老开不了</item>
+		<item>开不了锁</item>
+		<item>不能打开</item>
+
+		<item>不能上网</item>
+		<item>不能正常上网</item>
+		<item>上不了网</item>
+		<item>网络不通</item>
+		<item>上网故障</item>
+		<item>网线不通</item>
+		<item>网速慢</item>
+		<item>无法上网</item>
+		<item>调不出网络</item>
+		<item>连不上网络</item>
+		<item>打不开网络</item>
+		<item>网络打不开</item>
+		<item>不能联网</item>
+		<item>上网</item>
+		
+		<item>如何下载</item>
+		<item>不能下载</item>
+		<item>无法下载</item>
+		<item>下载不了</item>
+		
+		<item>黑屏了</item>
+		<item>黑屏</item>
+		<item>蓝屏了</item>
+		<item>蓝屏</item>
+		<item>花屏了</item>
+		<item>花屏</item>
+		
+		<item>显示不了</item>
+		<item>不能显示</item>
+		<item>无法显示</item>
+		<item>不显示</item>
+		<item>显示问题</item>
+		<item>显示异常</item>
+		<item>显示屏异常</item>
+		<item>显示变形</item>
+		<item>没有图像</item>
+		<item>屏幕出现振动</item>
+		<item>画面不动</item>
+		
+		<item>模糊</item>
+		<item>不清楚</item>
+		<item>不清晰</item>
+		<item>看不清</item>
+		<item>看不清楚</item>
+		<item>模糊不清</item>
+		<item>有重影</item>
+		
+		<item>关不了</item>
+		<item>关不上</item>
+		<item>关不上了</item>
+		<item>关闭不了</item>
+		
+		<item>不正常</item>
+		<item>使用不正常</item>
+		<item>异常</item>
+		
+		<item>坏了</item>
+		<item>坏</item>
+		<item>损坏</item>
+		
+		<item>点不亮</item>
+		<item>调不出</item>
+		<item>不亮了</item>
+		<item>不亮</item>
+		<item>烧了</item>
+		
+		<item>用不了</item>
+		<item>不能使用</item>
+		<item>使用不了</item>
+		<item>无法使用</item>
+		<item>使用</item>
+		<item>没有反应</item>
+		
+		<item>不能登录</item>
+		<item>登录不了</item>
+		<item>登录不上</item>
+		<item>登录出错</item>
+		<item>登录失败</item>
+		<item>密码错误</item>
+		<item>登录不成功</item>
+		<item>登录不进去</item>
+		<item>用户名不存在</item>
+		<item>无法登录</item>
+		<item>错误</item>
+		
+		<item>播放不了</item>
+		<item>不能播放</item>
+		<item>无法播放</item>
+		<item>放不出来</item>
+		<item>播不出来</item>
+		<item>放不了</item>
+		<item>播放</item>
+		
+		<item>不运行</item>
+		<item>不运作</item>
+		<item>运行不了</item>
+		<item>不能运行</item>
+		
+		<item>不能正常工作</item>
+		<item>不工作</item>
+		<item>不工作了</item>
+		<item>工作不了</item>
+		<item>不能工作</item>
+		
+		<item>失灵</item>
+		
+		<item>打印不了</item>
+		<item>不打印了</item>
+		<item>无法打印</item>
+		<item>不能打印</item>
+		
+		<item>进入不了</item>
+		<item>进不去了</item>
+		<item>无法进入</item>
+		<item>进不了</item>
+		<item>进不去</item>
+		
+		<item>不受控制</item>
+		<item>无法控制</item>
+		
+		<item>无法操作</item>
+		<item>操作</item>
+		
+		<item>没声音</item>
+		<item>不出声</item>
+		<item>不发声</item>
+		<item>没有声音</item>
+		
+		<item>中毒了</item>
+		<item>有病毒</item>
+		<item>中毒</item>
+		
+		<item>没有了</item>
+		<item>没有</item>
+		<item>没纸</item>
+		
+		<item>不动了</item>
+		<item>停了</item>
+		
+		<item>堵塞</item>
+		<item>堵塞了</item>
+		<item>堵住了</item>
+		<item>堵了</item>
+		
+		<item>自动关机</item>
+		<item>自动重启</item>
+		<item>重新启动</item>
+		
+		<item>冲突</item>
+		<item>地址冲突</item>
+		
+		<item>看不了</item>
+		<item>看不到</item>
+		<item>看不见</item>
+		
+		<item>出现警告</item>
+		<item>出现一个警告</item>
+		<item>出现报警声</item>
+		<item>报警</item>
+		
+		<item>输入不了</item>
+		<item>不能输入</item>
+		<item>无法输入</item>
+		<item>输入法不行</item>
+		<item>输入法未安装</item>
+		<item>输入法没安装</item>
+		<item>没安装输入法</item>
+		<item>输入无效</item>
+		
+		<item>重新安装</item>
+		<item>系统重装</item>
+		<item>重装系统</item>
+		<item>需要重装</item>
+		<item>需要</item>
+		<item>重装</item>
+		
+		
+		<item>启动</item>
+		
+		<item>装不上</item>
+		<item>安装</item>
+		<item>装</item>
+		
+		<item>系统损坏</item>
+		
+		<item>速度太慢</item>
+		<item>速度慢</item>
+		<item>运行太慢</item>
+		<item>响应太慢</item>
+		<item>响应慢</item>
+		<item>反应很慢</item>
+		<item>反应慢</item>
+		
+		<item>做不了</item>
+		<item>做不到</item>
+		
+		<item>找不到</item>
+		<item>找不着</item>
+		
+		<item>没办法保存</item>
+		<item>无法保存</item>
+		<item>不能保存</item>
+		<item>保存不了</item>
+		
+		<item>不制冷</item>
+		<item>没有水</item>
+		<item>没水了</item>
+		<item>没有热水</item>
+		<item>不能供热水</item>
+		
+		<item>冲不了水</item>
+		<item>不能冲水</item>
+		
+		<item>有问题</item>
+		<item>有问题了</item>
+		<item>出问题</item>
+		<item>出问题了</item>
+		
+		<item>清除不了</item>
+		<item>无法清除</item>
+		<item>不能清除</item>
+		
+		<item>删除不了</item>
+		<item>删除不掉</item>
+		<item>无法删除</item>
+		<item>不能删除</item>
+		
+		<item>需要更换</item>
+		
+		<item>不见了</item>
+		
+		<item>没有了</item>
+		
+		<item>没电</item>
+		<item>没有电</item>
+		<item>没电了</item>
+		
+		<item>用完</item>
+		<item>用完了</item>
+		<item>用光</item>
+		<item>用光了</item>
+		
+		<item>不能安装</item>
+		<item>无法安装</item>
+		<item>安装不了</item>
+		
+		<item>锁不了</item>
+		<item>锁不上了</item>
+		<item>锁不上</item>
+		<item>锁不住</item>
+		
+		<item>故障</item>
+		<item>有故障</item>
+		<item>出故障</item>
+		
+		<item>不行</item>
+		<item>不行了</item>
+		
+		<item>不响</item>
+		
+		<item>不通</item>
+		
+		<item>没有信号</item>
+		
+		<item>安装失败</item>
+		
+		<item>没有完成</item>
+		<item>没完成</item>
+		
+		<item>上不去了</item>
+		
+		<item>提交不上</item>
+		<item>不能提交</item>
+		<item>提交失败</item>
+		
+		<item>能否打开</item>
+		
+		<item>无法联系</item>
+		<item>不能连接</item>
+		<item>无法连接</item>
+		
+		<item>请马上过来</item>
+		<item>请派人更换</item>
+		<item>请派人来</item>
+		<item>请来人</item>
+		<item>请派人</item>
+		<item>派人来</item>
+		
+		<item>要换新的</item>
+		<item>要更换</item>
+		<item>需要更换</item>
+		<item>需更换</item>
+		<item>换一下</item>
+		<item>更换</item>
+		<item>请换</item>
+		<item>换床单被褥</item>
+		
+		<item>有裂缝</item>
+		<item>松了</item>
+		<item>掉出来</item>
+		<item>掉了</item>
+		<item>脱落</item>
+		<item>松脱</item>
+		<item>断开</item>
+		<item>绳子断了</item>
+		<item>爆裂</item>
+		
+		<item>漏水</item>
+		<item>漏水了</item>
+		<item>滴漏</item>
+		
+		<item>请更换</item>
+		<item>中断</item>
+		<item>切换</item>
+		<item>维修</item>
+		<item>增加</item>
+		<item>转换成</item>
+		<item>转换</item>
+		<item>修理</item>
+		
+		<item>打不着火</item>
+		<item>点不着火</item>
+		
+		<item>充不了值</item>
+		<item>不能充值</item>
+		<item>无法充值</item>
+		<item>充不进值</item>
+		<item>充不到值</item>
+
+		<item>房间的</item>
+		<item>只能</item>
+		<item>看</item>
+		<item>自己的</item>
+		<item>我的</item>
+		<item>你的</item>
+		<item>他的</item>
+		
+		<item>上方</item>
+		
+		<item>限制</item>
+		<item>完毕</item>
+		<item>自带</item>
+		
+		<item>很响</item>
+		<item>很大</item>
+		<item>严重</item>
+		<item>很严重</item>
+		<item>很厉害</item>
+		
+		<item>无法</item>
+		<item>控制</item>
+		
+		
+		<item>请换桶水</item>
+		<item>换桶装水</item>
+		<item>放矿泉水</item>
+		<item>请换</item>
+		<item>换水</item>
+		<item>送水</item>
+		<item>请换水</item>
+		<item>补充</item>
+		<item>请补充</item>
+		<item>不够</item>
+		<item>请帮调</item>
+		<item>请速送</item>
+		<item>请送</item>
+		
+		<item>连接</item>
+		
+		<item>请</item>
+		<item>到</item>
+		<item>的</item>
+		<item>和</item>
+		<item>来</item>
+		<item>也</item>
+		<item>了</item>
+		<item>后</item>
+		<item>就</item>
+		<item>用</item>
+		<item>水</item>
+		<item>送</item>
+		<item>换</item>
+		
+		<item>不知道</item>
+		<item>知道</item>
+		<item>怎样</item>
+		<item>什么都</item>
+		<item>什么</item>
+		<item>方法</item>
+		<item>办法</item>
+		
+		<item>看电视</item>
+		<item>用电脑</item>
+		
+		
+		<item>零个</item>
+		<item>一个</item>
+		<item>二个</item>
+		<item>两个</item>
+		<item>三个</item>
+		<item>四个</item>
+		<item>五个</item>
+		<item>六个</item>
+		<item>七个</item>
+		<item>八个</item>
+		<item>九个</item>
+		<item>十个</item>
+		
+		<item>过来</item>
+		<item>谢谢</item>
+		
+		
+		
+	</one-of>
+</rule>
+
+
+
+</grammar>	

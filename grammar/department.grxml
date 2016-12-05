@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='GB'?>
+<grammar xml:lang="zh-cn" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="TroubleReport">
+
+<meta name="incompletetimeout" content="1500"/>
+
+
+<rule id="TroubleReport">
+
+	<item repeat="0-1"> 
+		<ruleref uri="#Department"/> 
+	</item> 
+
+	<item repeat="0-4"> 
+		<ruleref uri="#DIGIT"/> 
+	</item> 
+
+</rule>
+
+<rule id="Department">
+	<one-of>
+		<item>校长办公室</item> 
+		<item>校长室</item>
+		
+		<item>办公室</item>
+		<item>秘书室</item>
+		<item>车队</item>
+		<item>文印</item>
+
+		<item>组织人事处</item> 
+		<item>人事处</item>
+		<item>组织处</item> 
+
+		<item>党委</item>
+		<item>机关党委</item>
+
+		<item>教务处</item>
+		 
+		<item>科研处</item> 
+
+		<item>行政处</item> 
+		<item>保卫科</item>
+		<item>管理服务科</item>
+		<item>膳食科</item>
+
+		<item>财务处</item>
+
+		<item>学员管理处</item> 
+
+		<item>分校协调处</item> 
+
+		<item>收发室</item>
+
+		<item>老干处</item>
+		<item>离退休干部处</item>
+		<item>离退休干部管理处</item>
+
+		<item>哲学</item>
+		<item>哲学教研部</item>
+
+		<item>经济学</item>
+		<item>经济学教研部</item>
+
+		<item>政治学</item>
+		<item>政治学教研部</item>
+
+		<item>法学</item>
+		<item>法学教研部</item>
+
+		<item>党史党建</item>
+		<item>党史党建教研部</item>
+		<item>党建教研部</item>
+
+		<item>管理学</item>
+		<item>管理学教研部</item>
+
+		<item>行政学</item>
+		<item>行政学教研部</item>
+
+		<item>语文</item>
+		<item>语文教研部</item>
+
+		<item>马列所</item>
+		<item>马克思列宁主义研究室</item>
+		<item>马克思列宁主义研究所</item>
+
+		<item>图书馆</item>
+		<item>信息研究部</item>
+		<item>信息技术部</item>
+		<item>读者工作部</item>
+
+		<item>信息中心</item>
+		<item>信息网络中心</item>
+		<item>网络中心</item>
+		<item>电教</item>
+		<item>电教中心</item>
+
+		<item>报告厅</item>
+		<item>一课室</item>
+		<item>二课室</item>
+		<item>三课室</item>
+		<item>四课室</item>
+		<item>五课室</item>
+		<item>六课室</item>
+		<item>七课室</item>
+		<item>八课室</item>
+		<item>礼堂</item>
+		<item>阶梯教室</item>
+	</one-of>
+</rule>
+
+<rule id="DIGIT"> 
+  <one-of> 
+   <item>0</item> 
+   <item>1</item> 
+   <item>2</item> 
+   <item>3</item> 
+   <item>4</item> 
+   <item>5</item> 
+   <item>6</item> 
+   <item>7</item> 
+   <item>8</item> 
+   <item>9</item> 
+  </one-of> 
+</rule> 
+
+
+</grammar>	
